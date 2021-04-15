@@ -9,7 +9,7 @@ const { registerUser } = require('../services/streamstudioAPI');
 const app = express();
 
 let multer  = require('multer');
-// let upload = multer({ dest: 'uploads/' });
+let upload = multer({ dest: 'uploads/' });
 const titleOptions = [
   {
       name: 'Mr',

@@ -27,7 +27,7 @@ const ststAuth = () => {
     })
 };
 
-exports.registerUser = async (body) => {
+exports.registerUser = async (body, img) => {
     const webcastID = process.env.STREAMSTUDIOWEBCASTID
     return new Promise (async (resolve,reject)=>{
         const token = await ststAuth()

@@ -19,9 +19,11 @@ var _require = require('../services/streamstudioAPI'),
 
 var app = express();
 
-var multer = require('multer'); // let upload = multer({ dest: 'uploads/' });
+var multer = require('multer');
 
-
+var upload = multer({
+  dest: 'uploads/'
+});
 var titleOptions = [{
   name: 'Mr',
   id: 1
