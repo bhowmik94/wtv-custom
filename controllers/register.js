@@ -8,20 +8,20 @@ const defaultText = require('../config/languagesText');
 const { registerUser } = require('../services/streamstudioAPI');
 const app = express();
 
-let multer  = require('multer');
+let multer = require('multer');
 let upload = multer({ dest: 'uploads/' });
 const titleOptions = [
   {
-      name: 'Mr',
-      id: 1
+    name: 'Mr',
+    id: 1
   },
   {
-      name: 'Mrs',
-      id: 2
+    name: 'Mrs',
+    id: 2
   },
   {
-      name: 'Ms',
-      id: 3
+    name: 'Ms',
+    id: 3
   }
 ];
 
@@ -96,14 +96,12 @@ exports.registerUser = async (req, res) => {
                 pageText: defaultText.english.confirmation
               });
           } catch (e) {
-            console.log('This is inside the email block' + e.message);
             res.render('registration_confirmation', {
               language: defaultText.english.language,
               pageText: defaultText.english.confirmation
             });
           }
         } catch (e) {
-          console.log(e);
           res.render('register_error', {
             pageText: { errorMessage: 'There have been an error' },
             language: defaultText[req.params.language].language
@@ -172,11 +170,11 @@ exports.resetPwdPost = async (req, res) => {
         language: defaultText[req.params.language].language,
 
       })
-    } catch(e){
+    } catch (e) {
       res.render('reset_password_success', {
-              reset: defaultText[req.params.language].resetPasswordPage,
-              language: defaultText[req.params.language].language,
-            });
+        reset: defaultText[req.params.language].resetPasswordPage,
+        language: defaultText[req.params.language].language,
+      });
     }
   } else {
     res.render('reset_password', {
