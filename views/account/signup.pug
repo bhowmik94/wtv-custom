@@ -1,0 +1,34 @@
+extends ../layout
+
+
+
+
+block content
+
+  .main.container
+    .row
+      .col-md-7.col-md-offset-5(style='margin:0 auto')
+        // register form
+        form(method='POST' action='/signup' style='margin:130px auto 0 auto;background:white;padding:50px')
+          h4.display-4.m-b-2(style='font-size:1.7em;font-weight:bold') Registration
+          div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', placeholder='First and Last Name' name='name')
+          input(type='hidden', name='_csrf', value=_csrf)
+          div.form-group
+            label(for='email') Email:
+            input#email.form-control(type='email', placeholder='name@email.com' name='email')
+          div.form-group
+            label(for='jobtitle') Job Title:
+            input#jobtitle.form-control(type='text', placeholder='Your Job Title' name='jobtitle')
+          div.form-group
+            label(for='department') Department:
+            input#department.form-control(type='text', placeholder='Your department' name='department')
+          div.form-group
+            label(for='pw') Password:
+            input#pw.form-control(type='password' name='password')
+          div.form-group
+            label(for='pw2') Confirm Password:
+            input#pw2.form-control(type='password' name='confirmPassword')
+          button.btn.btn-primary(type='submit',style='background:#DB0011;font-weight:bold;padding:10px 25px;border:none;border-radius:5px;') REGISTER
+

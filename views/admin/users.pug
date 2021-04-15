@@ -1,0 +1,18 @@
+extends admin_layout
+
+block content
+    section#content
+             table
+                thead
+                  tr
+                    th First Name
+                    th Last Name
+                    th Email
+                tbody
+                  each val in users
+                      tr
+                        td(data-column='First Name')=val.firstName
+                        td(data-column='Last Name')=val.lastName
+                        td(data-column='Email')=val.email
+
+    footer

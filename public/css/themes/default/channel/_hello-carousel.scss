@@ -1,0 +1,167 @@
+.hero-wrapper{
+  //display: -webkit-box;
+  //display: -ms-flexbox;
+  //display: flex;
+  //-webkit-box-align: center;
+  //-ms-flex-align: center;
+  //align-items: center;
+  position: relative;
+
+  .hero-carousel{
+    // transform: translateY(-50%);
+    margin-top: 430px!important;
+    @media(max-width:1300px){
+      margin-top: 230px!important;
+      .slick-list{
+        height:210px!important;
+      }
+
+    }
+    @media (max-width: 767px) {
+      margin-top: 345px;
+    }
+    .item{
+      &:focus{
+        outline: none;
+      }
+      .carousel-item-info{
+        &:focus{
+          outline: none;
+        }
+        .meta{
+          margin-bottom: 1.125rem;
+          .meta-item{
+            text-transform: uppercase;
+            margin-right: 0.75rem;
+            color: $denoteColor;
+            i{
+              color: $mainColor;
+              &.clock-icon {
+                content: url('../../../images/clock_dark.svg');
+                width: 16px;
+                height: 16px;
+                margin-right: 6px;
+                margin-bottom: -2.5px;
+                background-size: cover;
+                background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 61 (89581) - https://sketch.com --%3E%3Ctitle%3E0: Atoms / Colours / Blue 500%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Cpath d='M10.293,11.707 L7,8.414 L7,4 L9,4 L9,7.586 L11.707,10.293 L10.293,11.707 Z M8,0 C3.582,0 0,3.582 0,8 C0,12.418 3.582,16 8,16 C12.418,16 16,12.418 16,8 C16,3.582 12.418,0 8,0 Z M8,14 C4.686,14 2,11.314 2,8 C2,4.686 4.686,2 8,2 C11.314,2 14,4.686 14,8 C14,11.314 11.314,14 8,14 Z' id='path-1'%3E%3C/path%3E%3C/defs%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='0:-Basics-/-Icons-/-Time'%3E%3Cg id='0:-Atoms-/-Colours-/-Blue-500'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='Mask' fill='%23FFFFFF' fill-rule='nonzero' xlink:href='%23path-1'%3E%3C/use%3E%3Cg id='0:-Basics-/-Colours-/-Blue-500' mask='url(%23mask-2)' fill='%23FFFFFF'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+              }
+              &.calendar-icon {
+                content: url('../../../images/calendar_dark.svg');
+                width: 16px;
+                height: 16px;
+                margin-right: 6px;
+                margin-bottom: -2px;
+                background-size: cover;
+                background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 61 (89581) - https://sketch.com --%3E%3Ctitle%3E0: Atoms / Colours / Blue 500%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Cpath d='M14,2 L14,0 L12,0 L12,2 L4,2 L4,0 L2,0 L2,2 L0,2 L0,16 L16,16 L16,2 L14,2 Z M3,15 L1,15 L1,13 L3,13 L3,15 Z M3,12 L1,12 L1,10 L3,10 L3,12 Z M3,9 L1,9 L1,7 L3,7 L3,9 Z M3,6 L1,6 L1,4 L3,4 L3,6 Z M6,15 L4,15 L4,13 L6,13 L6,15 Z M6,12 L4,12 L4,10 L6,10 L6,12 Z M6,9 L4,9 L4,7 L6,7 L6,9 Z M6,6 L4,6 L4,4 L6,4 L6,6 Z M9,15 L7,15 L7,13 L9,13 L9,15 Z M9,12 L7,12 L7,10 L9,10 L9,12 Z M9,9 L7,9 L7,7 L9,7 L9,9 Z M9,6 L7,6 L7,4 L9,4 L9,6 Z M12,15 L10,15 L10,13 L12,13 L12,15 Z M12,12 L10,12 L10,10 L12,10 L12,12 Z M12,9 L10,9 L10,7 L12,7 L12,9 Z M12,6 L10,6 L10,4 L12,4 L12,6 Z M15,15 L13,15 L13,13 L15,13 L15,15 Z M15,12 L13,12 L13,10 L15,10 L15,12 Z M15,9 L13,9 L13,7 L15,7 L15,9 Z M15,6 L13,6 L13,4 L15,4 L15,6 Z' id='path-1'%3E%3C/path%3E%3C/defs%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='0:-Basics-/-Icons-/-Calendar'%3E%3Cg id='0:-Atoms-/-Colours-/-Blue-500'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='Mask' fill='%23FFFFFF' fill-rule='nonzero' xlink:href='%23path-1'%3E%3C/use%3E%3Cg id='0:-Basics-/-Colours-/-Blue-500' mask='url(%23mask-2)' fill='%23FFFFFF'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+              }
+            }
+          }
+        }
+
+        .title{
+          margin-bottom: 1.125rem;
+          font-size: 3rem;
+          line-height: 3.75rem;
+          font-weight: 700;
+          // text-shadow: 0 2px 4px rgba(36, 40, 49, 0.25);
+          //text-shadow: 2px 3px 2px rgba(0,0,0,0.25);
+          @media only screen and(max-width:1300px){
+            font-size:2em;
+            line-height: 1em;
+          }
+        }
+
+        .desc{
+          margin-bottom: 1.5rem;
+          font-size: 1.125rem;
+          line-height: 1.5rem;
+          color: #222;
+          // text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          //text-shadow: 2px 3px 2px rgba(0,0,0,0.25);
+          max-width: 768px;
+        }
+
+        .controls{
+          .btn-play{
+            width: 3.375rem;
+            height: 3.375rem;
+            border-radius: 3px;
+            background-color: $highlightColor;
+            margin-right: .75rem;
+            transition: background-color .2s;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            color: $mainColor;
+            cursor: pointer;
+            text-decoration: none;
+            outline: none;
+
+            &:hover{
+              background-color: #404859;
+            }
+
+            i{
+              margin: 0;
+              font-size: 1.5rem;
+            }
+          }
+
+          .text{
+            font-size: 1.625rem;
+            line-height: 1.875rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+
+
+    .slick-dots{
+      list-style: none;
+      padding: 0;
+      margin:0;
+      margin-top: 20px;
+      text-align: center;
+      li {
+        display: inline-block;
+        margin: 0px 9px;
+        button {
+
+          font-size: 0;
+          line-height: 0;
+          display: block;
+          width: 12px;
+          height: 12px;
+          padding: 5px;
+          cursor: pointer;
+          color: transparent;
+          border: 0;
+          outline: none;
+          background-color: #BFC7D9;
+          border-radius: 50%;
+          position: relative;
+        }
+        &.slick-active{
+          margin: 0px 7px;
+          button{
+            background-color: $highlightColor;
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+
+    .slick-arrow{
+      display: none !important;
+    }
+  }
+}

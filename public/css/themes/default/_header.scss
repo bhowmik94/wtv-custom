@@ -1,0 +1,440 @@
+.navbar{
+  border-bottom:  2px solid $brand-primary;
+  padding-left: 0;
+  padding-right: 0;
+  &.fixed-top{
+    position: absolute;
+  }
+
+  .page-header{
+    padding:20px;
+  }
+
+  .flags-main-container {
+    display: flex;
+
+    .single-flag-container {
+      padding:5px;
+      align-self: center;
+      a {
+        img {
+          width:35px;
+        }
+      }
+    }
+  }
+
+  .nav.navbar-nav{
+    &.info{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 2rem 1rem;
+      position: relative;
+
+      @media only screen and (max-width: map-get($grid-breakpoints, "lg"))  {
+        padding: 1rem;
+      }
+
+      @media (min-width: 768px) and (max-width: 1050px) {
+        // width: 150px;
+        padding-right: 0px;
+      }
+
+      .divider{
+        position: absolute;
+        border-left: 1px solid #383e4d;
+        top: 20%;
+        bottom: 20%;
+        left: 0;
+      }
+
+      .title{
+        font-size: 1.625rem;
+        line-height: 1.875rem;
+        font-weight: 700;
+      }
+
+      .subtitle{
+        font-weight: 400;
+        color: $denoteColor;
+      }
+    }
+
+    &.controls{
+      //display: none;
+      width: 900px;
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        flex-direction: row;
+      }
+      button{
+        cursor: pointer;
+        margin-left: 0.25rem;
+        font-size: .9375rem;
+        line-height: 1.5rem;
+
+
+        padding: .75em 1.125em;
+        border-radius: 3px;
+
+        box-shadow: none;
+        i{
+          color: $highlightColor;
+          &.search-icon {
+            content: url('../../../images/search-icon.svg');
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            margin-bottom: -2px;
+            background-size: cover;
+          }
+          &.menu-icon {
+            content: url('../../../images/menu.svg');
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            margin-bottom: -2px;
+            background-size: cover;
+
+          }
+        }
+
+        &:hover{
+          background-color: #d1d1d1;
+        }
+      }
+
+    }
+    a.header{
+      color: $brand-primary;
+      font-weight:bold;
+      cursor: pointer;
+      margin-left: 0.25rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding: .75em 1.125em;
+      border-radius: 3px;
+      box-shadow: none;
+      &:hover{
+        background-color: #d1d1d1;
+      }
+    }
+  }
+
+  img.header-logo {
+    width: 40%;
+    height:auto;
+    @media (max-width: 1100px) {
+      padding:15px 30px;
+      width: 250px;
+      height: auto;
+    }
+  }
+
+  @media only screen and (max-width: 1100px)  {
+    .navbar-collapse{
+      display: none;
+    }
+  }
+
+  .mobile-group{
+    @media (min-width: 1000px) {
+      display: none;
+    }
+    @media only screen and (max-width: 767px)  {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  }
+
+  &.navbar-expand-lg {
+    div.mobile-channel-info{
+      @media only screen and (max-width: 1100px)  {
+        display: block;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        .divider{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.phone-device-wrapper {
+  .navbar-expand-lg {
+    div.mobile-channel-info {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+.navbar-expand-lg {
+  .navbar-collapse {
+    @media (min-width: 1100px) {
+      display: flex;
+    }
+  }
+
+}
+
+.languages-mobile{
+display:none;
+  @media only screen and (max-width:600px){
+    display:flex;
+    .col-6{
+      h3{
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Mobile Menu Selector
+
+
+// ---------------------------
+// Vars & Helper Functions
+// ---------------------------
+
+
+a.dropdown-mobile{
+  box-shadow:none!important;
+}
+
+.dropdown-menu.mobile.show{
+      left:0!important;
+    }
+
+
+
+:root {
+  --screen-width:     320px;
+  --screen-height:    560px;
+  --header-bg-color:  #673AB7;
+  --splash-bg-color:  #F66028;
+}
+
+// calculate a circle's circumference based on radius
+@function circumference($r){
+  $pi: 3.141592653;
+  @return 2*$pi*$r;
+}
+
+
+// ---------------------------
+// Main Navigation Menu
+// ---------------------------
+
+
+@media (min-width:992px){
+  #nav-mobile{
+    display:none
+  }
+
+}
+  .nav {
+    // Toggle Button
+    &__toggle-mobile {
+      display:inline-block;
+      position:absolute;
+      z-index:10;
+      padding:0;
+      border:0;
+      background:transparent;
+      outline:0;
+      right:15px;
+
+      top:15px;
+      @media (max-width:500px){
+        right:15px;
+
+        top:7px;
+      }
+      cursor:pointer;
+      border-radius:50%;
+      transition:background-color .15s linear;
+
+      &:hover{
+        background-color:rgba(0,0,0,.5);
+      }
+    }
+
+    &__menu {
+      display:flex;
+      width:100%;
+      flex-direction:column;
+      justify-content:center;
+      height:100vh;
+      position:relative;
+      z-index:5;
+      visibility:hidden;
+      padding-left:0!important;
+    }
+
+    &__item {
+      opacity:0;
+      transition: all .3s cubic-bezier(0.000, 0.995, 0.990, 1.000) .3s;
+    }
+    @for $i from 1 through 5 {
+      &__item:nth-child(#{$i}){
+        transform:translateY(-40px * $i);
+      }
+    }
+
+    &__link {
+      color:white;
+      display:block;
+      text-align:center;
+      text-transform:uppercase;
+      letter-spacing:5px;
+      font-size:1.25rem;
+      text-decoration:none;
+      padding:1rem;
+
+      &:hover,
+      &:focus {
+        outline:0;
+        text-decoration:none;
+        background-color:rgba(0,0,0,0.2);
+      }
+    }
+    .navbar-brand{
+      padding-top:15px;
+    }
+  }
+
+
+  // ---------------------------
+  // SVG Menu Icon
+  // ---------------------------
+
+  .menuicon {
+    display:block;
+    cursor:pointer;
+    color: $brand-primary;
+
+    transform:rotate(0deg);
+    transition: .3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+
+    &__bar,
+    &__circle {
+      fill:none;
+      stroke: currentColor;
+      stroke-width:3;
+      stroke-linecap:round;
+    }
+    &__bar {
+      transform: rotate(0deg);
+      transform-origin:50% 50%;
+      transition: transform .25s ease-in-out;
+    }
+    &__circle {
+      transition: stroke-dashoffset .3s linear .1s;
+      stroke-dashoffset:circumference(23); // 23 is the <circle>'s radius
+      stroke-dasharray:circumference(23);
+    }
+  }
+
+
+  // ---------------------------
+  // Circular Splash Background
+  // ---------------------------
+
+  .splash {
+    position:absolute;
+    top:40px;
+    right:40px;
+    width: 1px;
+    height: 1px;
+
+    &::after {
+      content:"";
+      display:block;
+      position:absolute;
+      border-radius:50%;
+      background-color:$brand-primary;
+
+      // screen diameter can be 142vmax at most,
+      // circle needs to be twice that size to cover it
+      width:280vmax;
+      height:280vmax;
+      top:-142vmax;
+      left:-142vmax;
+
+      transform: scale(0);
+      transform-origin:50% 50%;
+      transition: transform .5s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+
+      // will-change tells the browser we plan to
+      // animate this property in the near future
+      will-change:transform;
+    }
+    img{
+      display:none
+    }
+  }
+
+
+  // ---------------------------
+  // Active State
+  // ---------------------------
+
+  .nav:target,
+  .nav--open {
+
+    //scale the background circle to full size
+    > .splash::after {
+      transform:scale(1);
+    }
+
+    //animate the menu icon
+    .menuicon {
+      color:white;
+      transform:rotate(180deg);
+
+      &__circle {
+        stroke-dashoffset:0;
+      }
+      &__bar:nth-child(1),
+      &__bar:nth-child(4) {
+        opacity:0;
+      }
+      &__bar:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      &__bar:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+
+    //show the nav items
+    .nav {
+      &__menu {
+        visibility:visible;
+      }
+
+      &__item {
+        opacity:1;
+        transform:translateY(-130px);
+      }
+    }
+  }
+
+
+
+

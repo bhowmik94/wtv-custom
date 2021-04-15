@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div.form-page-container
+        div.form-outer
+            .confirmation-body-container
+                p You have successfully deleted the following user
+                ul
+                    li Name: #{name}
+                    li Surname: #{surname}
+                    li email: #{email}
+
+                p.reset-password-success(style="text-decoration:underline") #{pageText.supportText}
+            h4 Click here to go back to the user page &nbsp
+                a(href=`/manager` ) Click here

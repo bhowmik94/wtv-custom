@@ -1,0 +1,135 @@
+
+.navbar-toggler{
+  border-radius: 0px;
+  border-left: solid 1px #41495a;
+  background-color: #313746;
+  margin: 0;
+
+  .navbar-toggler-icon{
+    color: $mainColor;
+    width: auto;
+    height: auto;
+    margin: 0rem 0.5rem;
+    i{
+      margin: 0;
+      &.search-mobile-icon {
+        content: url('../../../images/search-mobile-icon.svg');
+        width: 16px;
+        height: 16px;
+        background-size: cover;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 61 (89581) - https://sketch.com --%3E%3Ctitle%3E0: Atoms / Colours / Blue 500%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Cpath d='M15.504,13.616 L11.714,10.393 C11.322,10.04 10.903,9.879 10.565,9.894 C11.46,8.846 12,7.487 12,6.001 C12,2.687 9.314,0.001 6,0.001 C2.686,0.001 1.55431223e-13,2.687 1.55431223e-13,6.001 C1.55431223e-13,9.315 2.686,12.001 6,12.001 C7.486,12.001 8.845,11.461 9.893,10.566 C9.877,10.904 10.039,11.323 10.392,11.715 L13.615,15.505 C14.167,16.118 15.068,16.17 15.618,15.62 C16.168,15.07 16.116,14.168 15.503,13.617 L15.504,13.616 Z M6,10 C3.791,10 2,8.209 2,6 C2,3.791 3.791,2 6,2 C8.209,2 10,3.791 10,6 C10,8.209 8.209,10 6,10 Z' id='path-1'%3E%3C/path%3E%3C/defs%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='0:-Basics-/-Icons-/-Search'%3E%3Cg id='0:-Atoms-/-Colours-/-Blue-500' transform='translate(-0.000000, 0.000000)'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='Mask' fill='%23000000' fill-rule='nonzero' xlink:href='%23path-1'%3E%3C/use%3E%3Cg id='0:-Basics-/-Colours-/-Blue-500' mask='url(%23mask-2)' fill='%23FFFFFF'%3E%3Crect id='Rectangle' x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      &.menu-mobile-icon {
+        content: url('../../../images/menu-mobile.svg');
+        width: 16px;
+        height: 16px;
+        margin-bottom: -2px;
+        background-size: cover;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='14px' height='10px' viewBox='0 0 14 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 61 (89581) - https://sketch.com --%3E%3Ctitle%3E0: Atoms / Colours / Blue 500%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Cpath d='M14,8 L14,10 L0,10 L0,8 L14,8 Z M14,4 L14,6 L0,6 L0,4 L14,4 Z M14,0 L14,2 L0,2 L0,0 L14,0 Z' id='path-1'%3E%3C/path%3E%3C/defs%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='0:-Basics-/-Icons-/-Menu' transform='translate(-1.000000, -3.000000)'%3E%3Cg id='0:-Atoms-/-Colours-/-Blue-500' transform='translate(1.000000, 3.000000)'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='Mask' fill='%23000000' fill-rule='nonzero' xlink:href='%23path-1'%3E%3C/use%3E%3Cg id='0:-Basics-/-Colours-/-Blue-500' mask='url(%23mask-2)' fill='%23FFFFFF'%3E%3Cg transform='translate(-1.000000, -3.000000)' id='Rectangle'%3E%3Crect x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+  }
+}
+
+.navbar {
+  &.navbar-expand-lg {
+    .mobile-channel-info{
+      display: none;
+    }
+  }
+}
+
+.navbar {
+  .mobile-group {
+    .navbar-control-group{
+      display: none;
+    }
+  }
+}
+
+.mobile-device-wrapper {
+  &.phone-device-wrapper{
+    .navbar{
+      //border-bottom: 1px solid #41495a;;
+      width: 100%;
+      overflow: hidden;
+
+      @media only screen and (orientation: landscape) {
+        padding:0;
+      }
+      .container.page-header{
+        @media only screen and (orientation: landscape) {
+          max-width: 100%;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        .navbar-brand {
+          @media (max-width: 767px) {
+            margin-left: 10px;
+            padding-top:20px;
+          }
+        }
+      }
+
+      .navbar-brand{
+        @media only screen and (orientation: landscape) {
+          margin-left: 1rem;
+          width: 20%;
+        }
+
+      }
+
+      .mobile-group{
+        position: relative;
+        width: 100%;
+        .navbar-control-group{
+          margin-right: -1rem;
+          @media only screen and (orientation: landscape) {
+            margin-right: 0;
+          }
+          position:absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          .navbar-toggler{
+            height: 100%;
+            &:focus{
+              outline: none;
+            }
+
+          }
+        }
+      }
+
+      .navbar-collapse{
+        display: none;
+      }
+    }
+
+    .mobile-channel-info {
+      display: block !important;
+      margin: 0rem -1rem;
+      width: 150%;
+      border-top: 1px solid #41495a;
+      @media only screen and (orientation: landscape) {
+        max-width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0;
+      }
+      .divider {
+        display: none;
+      }
+    }
+  }
+}
+
+.navbar-expand-lg {
+  .mobile-group {
+    .navbar-brand {
+      @media (max-width: 576px) {
+        padding-left: 10px;
+      }
+    }
+  }
+}

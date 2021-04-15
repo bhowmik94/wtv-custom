@@ -1,0 +1,26 @@
+extends layout_login
+
+block content
+    .policies-container
+        a Privacy Policy
+        a About this Summit
+    div.form-page-container
+        div.form-outer
+            div.form-inner()
+                .events-logo-container
+                    .event-specific-logo-container
+                        img(src="/images/logo.png")
+
+                form(method="post" action="/resendEmail")
+                    div(style="font-weight: 400;font-size: 14px;color:red;margin-top:20px")=msg
+                    div(class="form-group")
+                        input(type="email" class="form-control" id="formGroupExampleInput2" placeholder="Please type your Email" name="email" required )
+                    //- div(class="g-recaptcha" data-sitekey="6LdYb_8UAAAAANXel7znoudVW8b5VoUpxwHYcxSB")
+                    input(type="hidden" name="_csrf" value=csrfToken)
+                    div(style="margin-bottom:20px")
+                    div(class="form-group")
+                        input(type="submit" value="Resend Email" class="btn btn-default")
+                .events-logo-container
+                    .companies-logos-containers
+                        img(src="/images/logos/gavi_logos.png")
+                //- script(type='text/javascript', src='https://www.google.com/recaptcha/api.js?hl'+lang)

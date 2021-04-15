@@ -1,0 +1,19 @@
+
+.mobile-device-wrapper {
+  &.phone-device-wrapper{
+    .hero-wrapper {
+      // margin-bottom: -270px;
+      .hero-carousel {
+        padding-top: 10rem;
+        .item {
+          .carousel-item-info {
+            .title{
+              font-size: 2rem;
+              line-height: 2.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

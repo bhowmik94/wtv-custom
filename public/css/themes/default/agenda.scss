@@ -1,0 +1,168 @@
+.break {
+  background: $brand-secondary !important;
+}
+
+.table td {
+  text-align: center !important;
+  color: grey;
+}
+
+.table ul {
+  list-style: none !important;
+}
+
+.break {
+  background: $brand-secondary !important;
+}
+
+thead.thead.agenda {
+  tr {
+    th {
+      // text-transform: uppercase;
+      color: $brand-secondary;
+    }
+  }
+}
+
+.text-padding {
+  margin: 10px 0;
+}
+
+ul {
+}
+
+@media (min-width: 1200px) {
+  // sourav ==== - ====
+  .mobile-section {
+    display: none;
+  }
+  table.agenda {
+    display: table;
+  }
+
+
+
+  table.agenda {
+    th {
+      color: grey;
+      text-align: center;
+      vertical-align: middle !important;
+    }
+  }
+  tr {
+    list-style: none !important;
+
+    td:nth-child(1),
+    td:nth-child(2) {
+      font-weight: bolder;
+    }
+
+    td {
+      vertical-align: middle !important;
+    }
+
+    th {
+      width: 100px;
+    }
+  }
+}
+
+#dynamic {
+  thead {
+    th {
+      background: #f4f4f4;
+      color: grey;
+      font-weight: bolder !important;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.agenda-container {
+  margin-top: 140px;
+  margin-bottom: 105px;
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+@media only screen and (max-width: 1200px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+
+
+  /* Force table to not be like tables anymore */
+  // table,
+  // thead,
+  // tbody,
+  // th,
+  // td,
+  // tr {
+  //   display: block;
+  // }
+
+  // /* Hide table headers (but not display: none;, for accessibility) */
+  // thead tr {
+  //   position: absolute;
+  //   top: -9999px;
+  //   left: -9999px;
+  // }
+
+  // tr {
+  //   border: 1px solid #ccc;
+  // }
+
+  // td {
+  //   /* Behave  like a "row" */
+  //   border: none;
+  //   border-bottom: 1px solid #eee;
+  //   position: relative;
+  //   padding-left: 50%;
+  // }
+
+  // td:before {
+  //   /* Now like a table header */
+  //   position: absolute;
+  //   /* Top/left values mimic padding */
+  //   top: 6px;
+  //   left: 6px;
+  //   width: 45%;
+  //   padding-right: 10px;
+  //   white-space: nowrap;
+  // }
+
+
+  // sourav ==== - ====
+  #dynamic {
+    display: none;
+  }
+
+  .mobile-section {
+    display: block;
+    ul.agenda {
+      list-style: none;
+      padding: 4px;
+  
+      li {
+        padding: 8px;
+      }
+      .time {
+        background: $brand-primary;
+        color: white;
+      }
+      .agenda, .speakers {
+        background: #F4F4F4;
+        margin: 5px 0;
+        color: grey;
+  
+        span:not(:last-of-type)::after {
+          content: ', ';
+        }
+      }
+  
+    }
+  }
+
+
+}

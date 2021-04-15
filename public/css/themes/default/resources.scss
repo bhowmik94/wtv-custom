@@ -1,0 +1,65 @@
+@media (min-width: 1200px) {
+  table.documents {
+    th {
+      color: white;
+      text-align: center;
+      min-width:200px;
+    }
+  }
+
+  .documents-container{
+    margin-top:110px;
+
+  }
+}
+
+.documents-container{
+  margin-top: 150px;
+  margin-bottom: 90px;
+}
+
+.document-icon{
+  transition:background 0.5s ease;
+  &:hover{
+    background: #4e555b;
+  }
+}
+
+
+table.documents {
+
+  th {
+
+    color: grey;
+    text-align: center;
+  }
+
+  td{
+    text-align: center;
+    vertical-align: middle;
+  }
+ tbody{
+   tr{
+     background:white
+   }
+ }
+
+  thead{
+    tr{
+      th:nth-child(3){
+        max-width:100px!important;
+        min-width:0!important;
+      }
+    }
+  }
+
+
+}
+
+.documents-line{
+  border-top:5px solid $brand-secondary
+}
+
+
+
+

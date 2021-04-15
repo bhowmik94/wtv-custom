@@ -1,0 +1,62 @@
+extends layout
+
+block content
+    div(class="agenda-container")
+        //- div(class="form-group language-selection" )
+        //-     label #{pageText.chooseYourLanguageText}&nbsp
+        //-         select(onchange="location = this.value;" class="language-change-field")
+        //-             option()
+        //-             option(value="/agenda/arabic") #{pageText.languageChoice.arabic}
+        //-             option(value="/agenda/chinese") #{pageText.languageChoice.mandarin}
+        //-             option(value="/agenda/english") #{pageText.languageChoice.english}
+        //-             option(value="/agenda/french") #{pageText.languageChoice.french}
+        //-             option(value="/agenda/russian") #{pageText.languageChoice.russian}
+        //-             option(value="/agenda/spanish") #{pageText.languageChoice.spanish}
+        div.container
+            div.row.title-common-container
+                div.col-lg-6(style="padding-left:20px;padding-bottom: 3rem ")
+                    h5(style="font-weight:bold!important; font-size: 1.5rem;  padding-top: 3rem") #{titleHeader}
+                div.col-lg-6(style="text-align:right; font-weight:bold!important;")
+                    h4(style="padding-top: 3rem; font-weight:bold!important;") #{dateHeader}
+                    p #{timeHeader}
+            table.table.agenda#dynamic
+                //- h1(style="padding:20px 20px 15px 20px;background:white; font-weight:bold;" ) Agenda
+                thead.thead.agenda
+                    tr(class="agenda")
+                        th(class="agenda" ) Start
+                        th(class="agenda"  ) End
+                        th(class="agenda" colspan="2"  ) Topic
+                        th(class="agenda" scope="col" colspan="2" ) Presented By
+
+                tbody(class="agenda")
+                  each val in agenda
+                      if val.break
+                          tr.agenda.break()
+                              td.agenda(style="color:white") #{val.start}
+                              td.agenda(style="color:white") #{val.end}
+                              td.agenda(colspan="2" style="color:white") #{val.agenda}
+                              td.agenda(colspan="2" style="color:white")
+                                  ul
+                                    each n in val.speakers
+                                        li #{n}
+                      else
+                          tr.agenda
+                              td.agenda() #{val.start}
+                              td.agenda() #{val.end}
+                              td.agenda(colspan="2") #{val.agenda}
+                              td.agenda(colspan="2")
+                                  ul
+                                    each n in val.speakers
+                                        li #{n}
+
+            .mobile-section 
+                each val in agenda
+                    ul.agenda
+                        li.time #{val.start} - #{val.end}
+                        li.agenda #{val.agenda}
+                        li.speakers
+                            each item in val.speakers 
+                                span #{item}
+
+
+            //- hr(class="documents-line")

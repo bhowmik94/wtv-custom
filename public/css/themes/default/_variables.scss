@@ -1,0 +1,70 @@
+// Brand Colors
+// -------------------------
+
+// $brand-primary: #005AAB;
+$brand-primary: #FDA73A;
+$brand-secondary: #5A5A5A;
+$brand-success: #323231;
+$brand-warning:#007B44;
+$brand-danger: #de4b33;
+$brand-info: #747678;
+
+// Typography
+// -------------------------
+// $font-family-base: 'Proxima Nova',Arial,sans-serif;
+// $headings-font-family: 'Proxima Nova',Arial,sans-serif;
+
+$font-family-base: 'Monserrat', sans-serif;
+$headings-font-family: 'Monserrat', sans-serif;
+
+// Buttons
+// -------------------------
+
+$btn-primary-border: darken($brand-primary, 3.2%);
+$btn-success-border: darken($brand-success, 3.2%);
+$btn-warning-border: darken($brand-warning, 3.2%);
+$btn-danger-border: darken($brand-danger, 3.2%);
+$btn-info-border: darken($brand-info, 3.2%);
+
+// Forms
+// -------------------------
+
+$input-border-radius: 0;
+$input-border-focus: #DB0011;
+
+// Form states and alerts
+// -------------------------
+
+$state-success-text: #569845;
+$state-success-bg: #dbf5d3;
+$state-success-border: #aed3a5;
+
+$state-info-text: #DB0011;
+$state-info-bg: #d9edf7;
+$state-info-border: #F76623;
+
+$state-warning-text: #bf9853;
+$state-warning-bg: #fdf8e2;
+$state-warning-border: #f2daab;
+
+$state-danger-text: #b94a48;
+$state-danger-bg: #f2dede;
+$state-danger-border: #e0b1b8;
+
+
+// Navbar
+// -------------------------
+
+$navbar-light-color: #252525;
+$navbar-light-hover-color: #F76623;
+$navbar-light-active-color: #F76623;
+
+$card-spacer-x: 0.75rem;
+
+$mainBackgroundColor: #EFF2F9;
+$denoteColor: #222;
+$mainColor: #212529;
+$highlightColor: #a4a4a4;
+$carouselItemBackground: #ffffff;
+$fontColour:white;
+$buttonFontColor:white;

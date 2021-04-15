@@ -1,0 +1,117 @@
+
+.navbar.navbar.fixed-top.navbar-expand-lg(class=noBorderHeader?'no-bottom-border':'')
+    nav(id="nav-mobile" class="nav mobile" role="navigation")
+        a.navbar-brand(href='/')
+
+          img.header-logo(src=`${setting.mainLogo}`)
+
+        ul(class="nav__menu" id="menu-mobile" tabindex="-1" aria-label="main navigation" hidden style="list-style:none")
+          //li(class="nav__item")
+          //  a(href="/home/english" class="nav__link") Home
+          li(class="nav__item")
+            a(href="/agenda/english" class="nav__link") Agenda
+          li(class="nav__item")
+            a(href="/live/english" class="nav__link") Live
+          li(class="nav__item")
+            a(href="/resources/english" class="nav__link") Resource
+          //li(class="nav__item")
+          //  a(href="/register" class="nav__link") Register
+          li(class="nav__item")
+          //  a(href="/ondemand" class="nav__link") On Demand
+          //li(class="nav__item")
+            a(href="/help/english" class="nav__link") Help
+        a(href="#nav-mobile" class="nav__toggle-mobile" role="button" aria-expanded="false" aria-controls="menu" style="z-index:100")
+         svg( class="menuicon" xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 50 50")
+          title Toggle Menu
+          g
+           line( class="menuicon__bar" x1="13" y1="16.5" x2="37" y2="16.5")
+           line( class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5")
+           line( class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5")
+           line( class="menuicon__bar" x1="13" y1="32.5" x2="37" y2="32.5")
+           circle( class="menuicon__circle" r="23" cx="25" cy="25")
+        div(class="splash")
+    //div.row.languages-mobile
+    //    div.col-6
+    //        h3
+    //            a(href="/home/english") English
+    //    div.col-6
+    //        h3
+    //            a(href="/home/french") French
+
+    .collapse.navbar-collapse
+      a.navbar-brand(href='/')
+        img.header-logo(src=`${setting.mainLogo}`)
+      ul.nav.navbar-nav.ml-auto.controls
+          //li.nav-item
+          //    a.header.btn.btn-default(href="/home/english" )
+          //        | Home
+          li.nav-item
+            a.header.btn.btn-default(href="/agenda/english" )
+                | Agenda
+          li.nav-item
+            a.header.btn.btn-default(href="/live/english" )
+                | Live
+          li.nav-item
+            a.header.btn.btn-default(href="/resources/english" )
+                  | Resource
+          //li.nav-item
+          //  a.header.btn.btn-default(href="/register" )
+          //      | Register
+          //li.nav-item
+          //  a.header.btn.btn-default(href="/ondemand" )
+                | On Demand
+          li.nav-item
+            a.header.btn.btn-default(href="/help/english" )
+                | Help
+
+
+
+
+block customscript
+script.
+    const nav = document.querySelector('#nav-mobile');
+    const menu = document.querySelector('#menu-mobile');
+    const menuToggle = document.querySelector('.nav__toggle-mobile');
+    const menuImg = document.querySelector('img.header-logo-mobile')
+    let isMenuOpen = false;
+
+
+    // TOGGLE MENU ACTIVE STATE
+    menuToggle.addEventListener('click', e => {
+      e.preventDefault();
+      isMenuOpen = !isMenuOpen;
+
+      // toggle a11y attributes and active class
+      menuToggle.setAttribute('aria-expanded', String(isMenuOpen));
+      setTimeout(function(){
+
+      },500)
+      menu.hidden = !isMenuOpen;
+      nav.classList.toggle('nav--open')
+      menuImg.style.display = "block"
+      });
+
+
+    // TRAP TAB INSIDE NAV WHEN OPEN
+    nav.addEventListener('keydown', e => {
+      // abort if menu isn't open or modifier keys are pressed
+      if (!isMenuOpen || e.ctrlKey || e.metaKey || e.altKey) {
+      return;
+      }
+
+      // listen for tab press and move focus
+      // if we're on either end of the navigation
+      const menuLinks = menu.querySelectorAll('.nav__link');
+      if (e.keyCode === 9) {
+      if (e.shiftKey) {
+      if (document.activeElement === menuLinks[0]) {
+      menuToggle.focus();
+      e.preventDefault();
+      }
+      } else if (document.activeElement === menuToggle) {
+      menuLinks[0].focus();
+      e.preventDefault();
+      }
+      }
+      });
+script.

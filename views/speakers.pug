@@ -1,0 +1,202 @@
+extends layout
+
+
+
+block content
+    style
+        include ../public/css/themes/default/semantic-card.min.css
+    div(class="presenters-container")
+        div(class="container")
+            div.row.title-common-container
+                div.col-lg-6(style="padding-left:20px;")
+                    h5(style="font-weight:bold!important") #{titleHeader}
+                div.col-lg-6(style="text-align:right")
+                    h4 #{dateHeader}
+                    p #{timeHeader}
+            h1(style="margin:22px 0 0 0") Speakers
+            div.row
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/polman") See more info
+                                img(src="/images/presenters/polman.jpg")
+                            div(class="content")
+                                h5(class="header") Host: Paul Polman
+                                    div(class="meta")
+                                        span(class="date") Co-founder of IMAGINE
+                            a(href="/speaker/english/polman" class="btn btn-success btn-block button-mobile-speaker-info") See more info
+
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/wei") See more info
+                                img(src="/images/presenters/wei.png")
+                            div(class="content")
+                                h5(class="header") Host: Tian Wei
+                                    div(class="meta")
+                                        span(class="date") News Anchor
+                            a(href="/speaker/english/wei" class="btn btn-success btn-block button-mobile-speaker-info") See more info
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/buberl") See more info
+                                img(src="/images/presenters/buberl.jpg")
+                            div(class="content")
+                                h5(class="header") Thomas Buberl
+                                    div(class="meta")
+                                        span(class="date") CEO of AXA
+                            a(href="/speaker/english/buberl" class="btn btn-success btn-block button-mobile-speaker-info") See more info
+            div.row
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/espinosa") See more info
+                                img(src="/images/presenters/espinosa.jpg")
+                            div(class="content")
+                                a(class="header") Patricia Espinosa Cantellano
+                                    div(class="meta")
+                                        span(class="date") Executive Secretary of the UNFCCC
+                            a(href="/speaker/english/espinosa" class="btn btn-success btn-block button-mobile-speaker-info") See more info
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/faber") See more info
+                                img(src="/images/presenters/faber.png")
+                            div(class="content")
+                                h5(class="header") Emmanuel Faber
+                                    div(class="meta")
+                                        span(class="date") CEO of Danone
+                            a(href="/speaker/english/faber" class="btn btn-success btn-block button-mobile-speaker-info") See more info
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/guangchang") See more info
+                                img(src="/images/presenters/guangchang.jpg")
+                            div(class="content")
+                                h5(class="header") Guo Guangchang
+                                    div(class="meta")
+                                        span(class="date") Chairman Fosun International
+                            a(href="/speaker/english/guangchang" class="btn btn-success btn-block button-mobile-speaker-info") See more info
+            div.row
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/jope") See more info
+                                img(src="/images/presenters/jope.png")
+                            div(class="content")
+                                h5(class="header") Alan Jope
+                                    div(class="meta")
+                                        span(class="date") CEO of Unilever
+                            a(href="/speaker/english/jope" class="btn btn-success btn-block button-mobile-speaker-info") See more info
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/kamdani") See more info
+                                img(src="/images/presenters/kamdani.jpg")
+                            div(class="content")
+                                a(class="header") Shinta Widjaja Kamdani
+                                    div(class="meta")
+                                        span(class="date") CEO of Sintesa Group
+                            a(href="/speaker/english/kamdani" class="btn btn-success btn-block button-mobile-speaker-info") See more info
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/levy") See more info
+                                img(src="/images/presenters/levy.jpg")
+                            div(class="content")
+                                a(class="header") Joaquim Levy
+                                    div(class="meta")
+                                        span(class="date" style="font-size:0.8em") Fellow of Steyer Taylor Institute at Stanford University, Former Minister of Finance of Brazil
+                            a(href="/speaker/english/levy" class="btn btn-success btn-block button-mobile-speaker-info") See more info
+            div.row
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/marques") See more info
+                                img(src="/images/presenters/marques.jpg")
+                            div(class="content")
+                                h5(class="header") Roberto Marques
+                                    div(class="meta")
+                                        span(class="date") CEO of Natura &Co
+                            a(href="/speaker/english/marques" class="btn btn-success btn-block button-mobile-speaker-info") See more info
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/mrema") See more info
+                                img(src="/images/presenters/mrema.jpg")
+                            div(class="content")
+                                h5(class="header") Elizabeth Maruma Mrema
+                                    div(class="meta")
+                                        span(class="date") Executive Secretary of the UN Convention on Biological Diversity
+                            a(href="/speaker/english/mrema" class="btn btn-success btn-block button-mobile-speaker-info") See more info
+
+                div.col-md-4
+                    div(class="ui special cards")
+                        div(class="card")
+                            div(class="blurring dimmable image")
+                                div(class="ui dimmer")
+                                    div(class="content")
+                                        div(class="center")
+                                            div(class="ui inverted button")
+                                                a(href="/speaker/english/iweala") See more info
+                                img(src="/images/presenters/iweala.jpg")
+                            div(class="content")
+                                h5(class="header") Dr. Ngozi Okonjo-Iweala
+                                    div(class="meta")
+                                        span(class="date" style="font-size:0.8em") Co-Chair of the Global Commission for the Economy and Climate, Former Minister of Finance of Nigeria
+                            a(href="/speaker/english/iweala" class="btn btn-success btn-block button-mobile-speaker-info") See more info

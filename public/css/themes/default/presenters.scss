@@ -1,0 +1,115 @@
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.single-speaker-container {
+  padding-top: 30vh;
+  min-height:100vh
+}
+
+
+.presenters-container {
+  padding-top:100px;
+  .container {
+    .content{
+        min-height:150px
+    }
+
+    h1{
+      color:$brand-primary;
+      text-align: center;
+      font-weight: bold;
+      font-size:2.5rem
+    }
+
+    a {
+     color:$brand-secondary
+    }
+    .row {
+      margin-top: 20px;
+      padding:0 90px;
+
+      .card {
+
+        .button-mobile-speaker-info{
+          background:$brand-primary!important;
+          display:none
+        }
+        width: 100%;
+        a{
+          color:white;
+
+          &:hover{
+            text-decoration: none;
+            color:black;
+          }
+
+        }
+
+
+      }
+    }
+  }
+}
+
+.card-body {
+  align-self: center !important;
+}
+
+
+.presenters-container {
+  .card {
+    box-shadow: 1px 1px 1px 1px #1D4C5A;
+  }
+
+  padding-bottom: 30px;
+}
+
+@media only screen and(max-width: 500px) {
+  .presenters-container {
+    padding-top: 180px;
+    .container{
+      .row{
+        padding:0 60px;
+
+        .col-md-4{
+          margin: 10px 0;
+        }
+      }
+    }
+
+  }
+
+  .button-mobile-speaker-info{
+    display:block!important;
+    border: unset;
+  }
+
+  .single-speaker-container{
+    padding-top:180px;
+    .container{
+      .row{
+        padding:40px;
+        img{
+        width:100%
+      }
+      }
+    }
+  }
+
+}
+
+
+@media only screen and(max-width: 992px) {
+  .card-horizontal {
+    display: block;
+  }
+
+  .img-square-wrapper {
+    img {
+      width: 80%
+    }
+  }
+
+}

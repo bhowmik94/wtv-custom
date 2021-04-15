@@ -1,0 +1,65 @@
+extends layout
+
+
+
+block content
+    div.page-header-container
+    div(class="documents-container")
+        //div(class="form-group language-selection" )
+        //    label #{pageText.chooseYourLanguageText}&nbsp
+        //        select(onchange="location = this.value;" class="language-change-field")
+        //            option()
+        //            option(value="/resources/arabic") #{pageText.languageChoice.arabic}
+        //            option(value="/resources/chinese") #{pageText.languageChoice.mandarin}
+        //            option(value="/resources/english") #{pageText.languageChoice.english}
+        //            option(value="/resources/french") #{pageText.languageChoice.french}
+        //            option(value="/resources/russian") #{pageText.languageChoice.russian}
+        //            option(value="/resources/spanish") #{pageText.languageChoice.spanish}
+        div.container
+            div.row.title-common-container
+                div.col-lg-6(style="padding-left:20px;")
+                    h5(style="font-weight:bold!important") #{titleHeader}
+                div.col-lg-6(style="text-align:right")
+                    h4 #{dateHeader}
+                    p #{timeHeader}
+            table.table.documents
+                thead.agenda.thead
+                    tr.agenda
+                    th.agenda(scope="col") 
+                      strong #{pageText.resource}
+                    th.agenda(scope="col" colspan="2")
+                      strong #{pageText.name}
+
+                tbody.agenda
+                    each val in resources
+                            tr.agenda
+                                th.agenda.document-icon(scope="row")
+                                    a(onclick=`updateUserResources(this,"${csrfToken}")` download target="_blank" class="document" href=`${val.downloadLink}` token=`${csrfToken}`)
+                                        img(src="/images/document-icon-2.png" width="50px")
+                                td.agenda(colspan="2") #{val.name}
+
+            hr(class="documents-line")
+            script.
+              const updateUserResources = (resourceName, csrfToken) => {
+                console.log($(resourceName)
+                  .parent()
+                  .siblings('td')
+                  .text())
+                data = {
+                  resourceNameJson: $(resourceName)
+                    .parent()
+                    .siblings('td')
+                    .text(),
+                  _csrf: csrfToken
+                }
+
+                $.ajax({
+                  type: "POST",
+                  url: '/resources/update_user',
+                  data: data,
+                  success: null,
+                  dataType: 'json'
+                });
+              }
+
+

@@ -1,0 +1,132 @@
+extends layout
+
+block content
+    div.manager-navs-main-container
+        ul.nav.nav-tabs.manager-nav-tabs(id="myTab" role="tablist")
+            li.nav-item(role="presentation")
+                a.nav-link(id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="contact" aria-selected="false") Users
+            li.nav-item(role="presentation")
+                a.nav-link(id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true") Agenda
+            li.nav-item(role="presentation")
+                a.nav-link(id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false") Resource
+            //li.nav-item(role="presentation")
+            //    a.nav-link(id="streamstudio-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false") Streamstudio
+
+
+        div.tab-content(id="myTabContent")
+            div.tab-pane.fade.show.active(id="home" role="tabpanel" aria-labelledby="home-tab")
+
+            div.tab-pane.fade(id="profile" role="tabpanel" aria-labelledby="home-tab")
+
+                div.manager-form-container
+                    each val, index in agenda
+                        form(method="post" action="/agenda/update")
+                            div(style="color:red;font-size:12px;margin-bottom:5px;")=msg
+                            div.form-groups-container.row
+                                div(class="form-group col-lg-1")
+                                    label Position
+                                    input(type="number" class="form-control" id="start"  name="start" required value=`${index}` disabled)
+                                div(class="form-group col-lg-1")
+                                    label Start
+                                    input(type="text" class="form-control" id="start"  name="start" required value=`${val.start}`)
+                                div(class="form-group col-lg-1")
+                                    label End
+                                    input(type="text" class="form-control" id="end" name="end" required value=`${val.end}`)
+                                div(class="form-group col-lg-3")
+                                    label Agenda
+                                    input(type="text" class="form-control" id="agenda" name="agenda" required value=`${val.agenda}`)
+                                div(class="form-group col-lg-3")
+                                    label Speaker
+                                    input(type="text" class="form-control" id="speaker" name="speakers" required value=`${val.speakers}`)
+                                div(class="form-group col-lg-3")
+                                    input(type="hidden" name="id" value=`${val._id}`)
+                                div(class="form-group col-lg-3")
+                                    input(type="hidden" name="_csrf" value=csrfToken)
+                                    input(type="submit" value="Update" class="btn btn-default")
+                <!-- Button trigger modal -->
+                button(type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter") Create New Agenda Point
+
+                <!-- Modal -->
+                div(class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+                    div(class="modal-dialog modal-dialog-centered" role="document")
+                        div(class="modal-content")
+                            div(class="modal-header")
+                                h5(class="modal-title" id="exampleModalLongTitle") Add Agenda Point
+                                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true" &times)
+                            div(class="modal-body")
+                                div.manager-form-container
+                                    form(method="post" action="/agenda/add")
+                                        div(style="color:red;font-size:12px;margin-bottom:5px;")=msg
+                                        div.form-groups-container.row
+                                            div(class="form-group col-lg-12")
+                                                label Position(use this field if you like to insert the Agenda point in a specific numerical position)
+                                                input(type="number" class="form-control" id="position"  name="position"  min="0" )
+                                            div(class="form-group col-lg-6")
+                                                label Start
+                                                input(type="text" class="form-control" id="start"  name="start" required )
+                                            div(class="form-group col-lg-6")
+                                                label End
+                                                input(type="text" class="form-control" id="end" name="end" required )
+                                        div(class="form-group" )
+                                            label Agenda
+                                            textarea(type="text" class="form-control" id="agenda" name="agenda" required )
+                                        div(class="form-group" )
+                                            label Speaker/s
+                                            textarea(type="text" class="form-control" id="speaker" name="speakers" placeholder="if you add multiple speakers please separate using the semi-colon character" required )
+                                        div(class="form-group col-lg-3")
+                                            input(type="hidden" name="_csrf" value=csrfToken)
+                                        div(class="form-check")
+                                            label(class="form-check-label" for="exampleCheck1") Is this a break?
+                                            input(type="checkbox" class="form-check-input" id="exampleCheck1" name="break")
+                                        div(class="modal-footer")
+                                            button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
+                                            input(type="submit" value="Submit" class="btn btn-default")
+
+            div.tab-pane.fade(id="contact" role="tabpanel" aria-labelledby="home-tab")
+                div.manager-form-container
+                    each val in resources
+                        form(method="post" action="/resources")
+                            div(style="color:red;font-size:12px;margin-bottom:5px;")=msg
+                            div.form-groups-container.row
+                                div(class="form-group col-lg-3")
+                                    label Name
+                                    input(type="text" class="form-control" id="name"  name="name" required value=`${val.name}`)
+                                div(class="form-group col-lg-3")
+                                    label Description
+                                    input(type="text" class="form-control" id="description" name="description" required value=`${val.description}`)
+                                div(class="form-group col-lg-3")
+                                    label Download Link
+                                    input(type="text" class="form-control" id="download" name="download" required value=`${val.downloadLink}`)
+                                div(class="form-group col-lg-3")
+                                    label Language
+                                    input(type="text" class="form-control" id="language" name="language" required value=`${val.language}`)
+                                div(class="form-group col-lg-3")
+                                    input(type="hidden" name="id" value=`${val._id}`)
+                                div(class="form-group col-lg-3")
+                                    input(type="hidden" name="_csrf" value=csrfToken)
+                                    input(type="submit" value="Update" class="btn btn-default")
+            //div.tab-pane.fade(id="streamstudio" role="tabpanel" aria-labelledby="home-tab")
+            div.tab-pane.fade(id="users" role="tabpanel" aria-labelledby="users-tab")
+                <nav class="navbar navbar-light bg-light">
+                <form class="form-inline" method="get" action="/manager/search_user">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" name="email" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <a class="btn btn-outline-danger my-2 my-sm-0" type="submit" href="/manager">Reset</a>
+                </form>
+                </nav>
+                div.users-list-container
+                    h1 Users : #{users.userNumber}
+                    ul(class="list-group list-group-flush")
+                        each user in users.usersList
+                            li(class="list-group-item") #{user.firstName} -  #{user.lastName} - #{user.email}
+                                form(action=`/manager/user_delete/${user.id}` method="post")
+                                    div(class="form-group col-lg-3")
+                                        input(type="hidden" name="_csrf" value=csrfToken)
+                                        input(type="hidden" name="name" value=`${user.firstName}`)
+                                        input(type="hidden" name="surname" value=`${user.lastName}`)
+                                        input(type="hidden" name="email" value=`${user.email}`)
+                                        input.btn.btn-danger(type="submit" value="Delete User")
+
+
+

@@ -1,0 +1,48 @@
+
+.mobile-device-wrapper {
+  &.phone-device-wrapper{
+    .channels {
+      margin-top: 6rem;
+      #featured-playlist {
+        .play-list {
+          border-top: solid 1px #383E4D;
+          padding-top: 12px;
+        }
+      }
+      .play-list {
+        .head{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+
+          .icon{
+            min-width: 3.375rem;
+          }
+
+          .time{
+            margin-left: 0;
+          }
+
+          .head-group{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+          }
+        }
+
+        .channel-carousel {
+          .slick-arrow{
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}

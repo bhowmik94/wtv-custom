@@ -1,0 +1,137 @@
+@import "node_modules/@ladjs/bootstrap-social/bootstrap-social.scss";
+
+// Buttons
+// -------------------------
+
+
+.language-selection{
+  padding-left:20px;
+  color:$fontColour
+}
+
+.title-common-container{
+  color:$fontColour
+}
+
+body {
+  font-family: 'Montserrat', sans-serif!important;
+  overflow-x:hidden
+}
+
+.btn {
+  border-radius: 0;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.11), 1px 1px 0 rgba(255, 255, 255, 0.21) inset;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-link {
+  box-shadow: none;
+}
+
+.btn-raised, .btn-raised:focus, .btn-raised:active, .btn-raised:hover {
+  color: rgb(51, 51, 51);
+  background-image: linear-gradient(to bottom, #ffffff 60%, #f8f8f8 100%);
+  border-color: rgb(204, 204, 204);
+}
+
+// Forms
+// -------------------------
+
+.form-control:focus {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+// Alerts
+// -------------------------
+
+.alert {
+  border-radius: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
+}
+
+// Navbar
+// -------------------------
+
+.navbar-light {
+  border: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  opacity: 0.9;
+  .navbar-nav {
+    > li > a {
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: all 0.2s linear;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .nav-link {
+      color: #222;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .navbar-brand {
+    color: $navbar-light-color;
+    line-height: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .navbar-toggler {
+    border-bottom-color: rgb(221, 221, 221);
+    color: rgb(51,51,51);
+  }
+  .navbar-toggler:focus {
+    background: rgb(221, 221, 221);
+  }
+
+  .navbar-toggler:hover {
+    background: rgb(221, 221, 221);
+  }
+}
+
+.navbar-toggler-icon {
+  color: rgb(51,51,51);
+}
+
+.dropdown-item {
+  > a {
+    color: #222;
+    text-decoration: none;
+  }
+}
+
+.dropdown-menu {
+  left: initial;
+  right: 0; /* add right with 0 or a low pixel value */
+}
+
+button {
+  i#icon-arrow-right {
+    content: url('../../../images/arrow-right.svg');
+    width: 19px;
+    height: 30px;
+    margin-left: 2px;
+    background-size: cover;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='10px' height='16px' viewBox='0 0 10 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 61 (89581) - https://sketch.com --%3E%3Ctitle%3E0: Atoms / Colours / Blue 500%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Cpolygon id='path-1' points='1.5 0 0 1.5 6.5 8 0 14.5 1.5 16 9.5 8'%3E%3C/polygon%3E%3C/defs%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='0:-Basics-/-Icons-/-Right' transform='translate(-4.000000, 0.000000)'%3E%3Cg id='0:-Atoms-/-Colours-/-Blue-500' transform='translate(4.000000, 0.000000)'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='Mask' fill='%23FFFFFF' fill-rule='nonzero' xlink:href='%23path-1'%3E%3C/use%3E%3Cg id='0:-Basics-/-Colours-/-Blue-500' mask='url(%23mask-2)' fill='%23FFFFFF'%3E%3Cg transform='translate(-4.000000, 0.000000)' id='Rectangle'%3E%3Crect x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  i#icon-arrow-left {
+    content: url('../../../images/arrow-left.svg');
+    width: 19px;
+    height: 30px;
+    background-size: cover;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='10px' height='16px' viewBox='0 0 10 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 61 (89581) - https://sketch.com --%3E%3Ctitle%3E0: Atoms / Colours / Blue 500%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Cpolygon id='path-1' points='8.5 16 10 14.5 3.5 8 10 1.5 8.5 0 0.5 8'%3E%3C/polygon%3E%3C/defs%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='0:-Basics-/-Icons-/-Left' transform='translate(-2.000000, 0.000000)'%3E%3Cg id='0:-Atoms-/-Colours-/-Blue-500' transform='translate(2.000000, 0.000000)'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'%3E%3C/use%3E%3C/mask%3E%3Cuse id='Mask' fill='%23FFFFFF' fill-rule='nonzero' xlink:href='%23path-1'%3E%3C/use%3E%3Cg id='0:-Basics-/-Colours-/-Blue-500' mask='url(%23mask-2)' fill='%23FFFFFF'%3E%3Cg transform='translate(-2.000000, 0.000000)' id='Rectangle'%3E%3Crect x='0' y='0' width='16' height='16'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+input{
+  height: 50px!important;
+}
+
+
+label{
+  font-weight:bold;
+}

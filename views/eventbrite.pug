@@ -1,0 +1,27 @@
+extends layout_login
+
+block content
+    div.form-page-container
+        div(class="form-outer")
+            .logo-container()
+            div(id="eventbrite-widget-container-126724687953")
+
+            h4 #{pageText.secondHeaderText}&nbsp
+                a(href=`/login/${language}` ) #{pageText.anchor}
+
+
+    script.
+        var exampleCallback = function() {
+        console.log('Order complete!');
+        };
+
+        window.EBWidgets.createWidget({
+        // Required
+        widgetType: 'checkout',
+            eventId: '126724687953',
+            iframeContainerId: 'eventbrite-widget-container-126724687953',
+
+        // Optional
+        iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+        onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+        });

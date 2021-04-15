@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  div.home-container
+    //div(class="form-group language-selection" )
+    //  label #{pageText.chooseYourLanguageText}&nbsp
+    //    select(onchange="location = this.value;" class="language-change-field")
+    //      option()
+    //      option(value="/home/arabic") #{pageText.languageChoice.arabic}
+    //      option(value="/home/chinese") #{pageText.languageChoice.mandarin}
+    //      option(value="/home/english") #{pageText.languageChoice.english}
+    //      option(value="/home/french") #{pageText.languageChoice.french}
+    //      option(value="/home/russian") #{pageText.languageChoice.russian}
+    //      option(value="/home/spanish") #{pageText.languageChoice.spanish}
+    div.container
+      div.row.title-common-container
+        div.col-lg-6(style="padding-left:20px;" )
+          h5(style="font-weight:bold!important") #{titleHeader}
+        div.col-lg-6(style="text-align:right")
+          h4 #{dateHeader}
+          p #{timeHeader}
+      div.banner-container
+
+
+
+    div.title-container.description-container.container
+      h3(style="margin-top:10px;text-align:center; text-decoration:underline;padding:10px 0") #{pageText.bodyTitleHeader}
+      h5(style="margin-top:10px;text-align:center;padding:10px 0") #{pageText.bodySecondHeader}
+      p.home-description-text() #{pageText.bodyTextOne}
+      p.home-description-text() #{pageText.bodyTextTwo}
+      a(href=`/live/${language}` style="text-decoration:underline")  #{pageText.watchAnchor}
+
+
+block customscript
+  script
+    | (window.constants || (window.constants = {}));
+    | window.constants.BASE_URL='
+    =siteBaseUrl
+    | ';
+    | window.constants.CURRENT_SCREEN = 'playlist';
+    | window.constants.CURRENT_CHANNEL_ID='
+    =channelId
+    | ';
+    | window.constants.CURRENT_PLAYLIST_ID='
+    =playlistId
+    | ';
+    | window.constants.CURRENT_VIDEO_ID='
+    =videoId
+    | ';

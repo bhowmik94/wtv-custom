@@ -1,0 +1,66 @@
+extends layout
+
+block content
+  .playlist-player
+      .container.custom-width.video-player-container
+        div.loader-container
+          div.loader
+        div.video-player
+            iframe(src=videoEmbeddedUrl, style='border: 0;', webkitallowfullscreen, allowfullscreen, width='100%', height='100%', frameborder='0')
+
+  .playlist-video-info
+      .container.custom-width
+        div.video-info
+          div.row
+              div.col-md-9.col-xs-push-12
+                div.item
+                    div.meta
+                      span.meta-item.date
+                        i.calendar-icon
+                        =videoTime
+                      span.meta-item.duration
+                        i.clock-icon
+                        =videoDuration
+                    div.title
+                        =videoTitle
+                    div.desc
+                        =videoDescription
+                    //div.controls
+                    //  a.btn-share
+                    //    i.share-icon
+                    //    span.text SHARE
+
+
+              div.col-md-3.col-xs-pull-12
+                  //.chatbox
+                  //    .chatbox-window
+                  //        .chatbox-group
+                  //            p.chatbox-user JANE DOE
+                  //            p.chatbox-message Hi Tim. Really enjoying this content. #greatvideo
+                  //    .chatbox-input
+                  //        input(type='text', placeholder='Chat with other users')
+
+  .playlist-video-carousel
+      .container.custom-width
+          section.channels
+            div(id="current-playlist-carousel")
+
+block customscript
+  script
+    | (window.constants || (window.constants = {}));
+    | window.constants.BASE_URL='
+    =siteBaseUrl
+    | ';
+    | window.constants.CURRENT_SCREEN = 'playlist';
+    | window.constants.CURRENT_CHANNEL_ID='
+    =channelId
+    | ';
+    | window.constants.CURRENT_PLAYLIST_ID='
+    =playlistId
+    | ';
+    | window.constants.CURRENT_VIDEO_ID='
+    =videoId
+    | ';
+    | window.constants.LANGUAGE='
+    =language
+    | ';

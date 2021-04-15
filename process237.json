@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "237-unit-ch",
+      "script": "./app.js",
+      "instances": "max",
+      "exec_mode": "cluster",
+      "watch": true,
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

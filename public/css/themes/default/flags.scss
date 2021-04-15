@@ -1,0 +1,64 @@
+//.flags-mobile-container {
+//  .row {
+//    .form-group {
+//      display: flex;
+//      width: 100%;
+//      padding: 10px 10px 0 10px;
+//      margin-bottom:0;
+//
+//      p {
+//        margin-right:15px;
+//        padding:0;
+//      }
+//      select {
+//        width: 80%;
+//        margin-left:5px
+//      }
+//    }
+//  }
+//}
+
+.flags-mobile-container{
+  display:none;
+  position: absolute;
+  top: 10px;
+  .flags-inner-container{
+    display:flex;
+    .flag-container{
+      padding:10px
+    }
+    a{
+      img{
+        width:50px
+      }
+
+    }
+  }
+
+  @media only screen and (max-width:1170px){
+    display:block;
+    right:100px;
+  }
+  @media only screen and (max-width:500px){
+    display:block;
+    left:20px;
+    .flags-inner-container{
+      .flag-container{
+        background:rgba(0,0,0,0.5)
+      }
+
+    }
+  }
+
+  @media screen and (orientation: landscape) and (max-width: 800px) {
+    left:20px;
+    .flags-inner-container{
+      .flag-container{
+        background:rgba(0,0,0,0.5)
+      }
+
+    }
+
+  }
+
+}

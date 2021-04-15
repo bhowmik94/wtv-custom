@@ -1,0 +1,23 @@
+extends layout
+
+
+block content
+    div(class="help-main-container")
+        //div(class="form-group language-selection" )
+        //    label #{pageText.chooseYourLanguageText}&nbsp
+        //        select(onchange="location = this.value;" class="language-change-field")
+        //            option()
+        //            option(value="/help/arabic") #{pageText.languageChoice.arabic}
+        //            option(value="/help/chinese") #{pageText.languageChoice.mandarin}
+        //            option(value="/help/english") #{pageText.languageChoice.english}
+        //            option(value="/help/french") #{pageText.languageChoice.french}
+        //            option(value="/help/russian") #{pageText.languageChoice.russian}
+        //            option(value="/help/spanish") #{pageText.languageChoice.spanish}
+        .help-container
+            .help-box-container
+                .help-box-details-container
+                    .help-box-text-container
+                        h1 #{pageText.header}
+                        p #{pageText.technicalTeamNameText} <br> #{pageText.technicalTeamEmail}
+                        //p #{pageText.generaleQueriesText}
+                        //p #{pageText.generaleQueriesEmail} --  #{pageText.generaleQueriesPhone}

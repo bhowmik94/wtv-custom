@@ -1,0 +1,132 @@
+footer {
+  .container-fluid {
+    padding: 0;
+  }
+  //background-image: linear-gradient(to left, white, #00148C);
+  position: absolute;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+
+  .footer-border {
+    width: 100%;
+    height: 60px;
+    background: $brand-primary;
+    position: absolute;
+    bottom: 0;
+
+    a {
+      float: right;
+      height: 60px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+  }
+
+  .footer-content {
+    .footer-logos-container {
+      position: relative;
+      // margin-bottom: 10px;
+      height: 70px;
+    }
+
+    .footer-left {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      max-width: 33%;
+
+      .desc {
+        text-align: left;
+        a {
+          display: block;
+          font-size: 0.875rem;
+          line-height: 1.125rem;
+          font-weight: 400;
+          color: $denoteColor;
+        }
+      }
+      img.footer-logo {
+        margin-left: 10px;
+        width: 150px;
+        @media (max-width: 767px) {
+          width: 30px;
+        }
+      }
+    }
+
+    .social-sharing {
+
+      li {
+        margin-left: 0.5em;
+        a {
+          width: 3.375em;
+          height: 3.375em;
+          background-color: white;
+          border-radius: 50%;
+          -webkit-transition: background-color 0.2s;
+          transition: background-color 0.2s;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+
+          svg {
+            width: 2em;
+            height: 2em;
+            path{
+              fill:$brand-primary
+            }
+          }
+
+          &:hover {
+            background-color: $highlightColor;
+            text-decoration: none;
+          }
+          i{
+            margin-right:0;
+            font-size:30px;
+            color:$brand-primary
+          }
+        }
+      }
+    }
+  }
+}
+
+//@media screen and(max-width:768px) {
+//footer{
+//  .footer-content{
+//    .social-sharing{
+//      li{
+//        a{
+//          width: 2.675em;
+//          height: 2.675em;
+//        }
+//      }
+//
+//    }
+//  }
+//}
+//}

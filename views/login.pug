@@ -1,0 +1,42 @@
+extends layout_login
+
+block content
+    //- <div style="color:white;background-color:#0066A1;margin-top:30px;width:60%;padding-top:5px;padding-bottom:5px;"><h1 style="text-align:left;padding-left:20px;">Login: <b>Page</b></h1></div>
+    div.form-page-container
+        div(class="form-outer")
+                .logo-container()
+                    img(src="/images/logos/logo.png")
+                div.form-inner(style="width:40%")
+                    //div(class="form-group " )
+                    //    select(onchange="location = this.value;" class="language-change-field" )
+                    //        option() #{pageText.chooseYourLanguageText}
+                    //        option(value="/login/arabic") #{pageText.languageChoice.arabic}
+                    //        option(value="/login/chinese") #{pageText.languageChoice.mandarin}
+                    //        option(value="/login/english") #{pageText.languageChoice.english}
+                    //        option(value="/login/french") #{pageText.languageChoice.french}
+                    //        option(value="/login/russian") #{pageText.languageChoice.russian}
+                    //        option(value="/login/spanish") #{pageText.languageChoice.spanish}
+                    h5(style="margin:0 auto;display:table;") #{pageText.header}
+                    form(method="post" action=`/login/${language}`)
+                        div(class="form-group")
+                            input(type="email" class="form-control" placeholder=`${pageText.emailPlaceHolder}` name="email" required  )
+                        div(class="form-group")
+                            input(type="password" class="form-control"  placeholder=`${pageText.passwordPlaceHolder}` name="password" )
+                        div(style="font-weight: 400;font-size: 14px;color:red;padding-bottom:20px;text-align:center") #{msg}
+                        //- div(class="g-recaptcha" data-sitekey="6LdYb_8UAAAAANXel7znoudVW8b5VoUpxwHYcxSB")
+                        input(type="hidden" name="_csrf" value=csrfToken)
+
+                        //<a href='/resendEmail' style="font-size:12px;font-weight:400;color:red;margin-bottom:5px">Resend Password </a>
+
+                        div(class="form-group")
+                            input(type="submit" value=`${pageText.submitButtonText}` class="btn btn-default")
+                h5 #{pageText.secondHeaderText}&nbsp
+                    a(href=`/register/${language}`) #{pageText.anchor}
+                h5 #{pageText.resetPassword}&nbsp
+                    a(href=`/reset-password/${language}`) #{pageText.resetPasswordAnchor}
+        //- <table style="margin-bottom:-80px;margin-top:50px;margin-left:-170px;margin-right:-170px;"><tr><td style="float:left;width:50%;"><img src="/images/POWERED-BY-wtv_FOOTER_BLACK.png" style="width:40%;float:left;"></td><td style="float:right;width:50%"><img src="/images/login_logos_bottom.png" style="width:60%;float:right;"></td></tr></table>
+        </div>
+
+        
+
+

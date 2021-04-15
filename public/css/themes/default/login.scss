@@ -1,0 +1,188 @@
+.policies-container {
+  position: absolute;
+  display: flex;
+  padding: 20px;
+  color: $brand-primary !important;
+
+  a {
+    margin-left: 20px;
+    text-decoration: underline !important;
+  }
+}
+
+.confirmation-body-container {
+  padding: 30px;
+}
+
+.form-page-container {
+  //  background-image: url(" ../../images/login_background.jpg");
+  background: linear-gradient(to right, #ff9031, #ffcb4c);
+  min-height: 100vh;
+  padding-top: 70px;
+  color: $brand-primary !important;
+  font-weight: 600 !important;
+
+  .form-outer {
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ffebc3, #fffbf4);
+    box-shadow: 0px 0px 15px grey;
+
+    h5:last-child {
+      padding-bottom: 20px;
+    }
+    h5 {
+      text-align: center;
+      color: grey;
+
+      a {
+        color: $brand-primary;
+        font-weight: bold;
+      }
+    }
+
+    .logo-container {
+      width: 25%;
+      position: relative;
+      left: 10px;
+      top: 10px;
+
+      padding: 20px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    h3 {
+      a {
+        color: #0066a1;
+      }
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    .form-inner {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px 0 20px 0;
+
+      h5 {
+        padding: 10px 0 20px 0;
+        font-weight: bold;
+        // text-transform: uppercase;
+        color: $brand-primary;
+      }
+
+      .language-change-field {
+        min-width: 200px;
+        min-height: 50px;
+        text-align-last: center;
+      }
+
+      .form-group {
+        text-align: center;
+
+        #reset-email-field {
+          width: 40%;
+          margin: 0 auto;
+          &::placeholder {
+            color: $brand-secondary !important;
+            padding-left: 20px;
+            font-size: 1.2em;
+          }
+        }
+
+        input,
+        select,
+        textarea {
+          border-radius: 30px;
+          width: 100%;
+          min-height: 50px;
+          text-align-last: left;
+          color: $brand-primary;
+          background: white;
+          border: 0.2px solid #ffcb4c;
+
+          &::placeholder {
+            // color: $brand-secondary !important;
+            padding-left: 20px;
+            font-size: 1.2em;
+          }
+          &:hover {
+            border: 0.2px solid #ff9031;
+          }
+        }
+
+        input[type="submit"] {
+          background: $brand-primary;
+          color: $buttonFontColor !important;
+          font-weight: bold;
+          min-width: 150px;
+          text-align-last: center;
+          width: 200px;
+          border: 0.2px solid #ffcb4c;
+          transition: background-color 0.5s ease;
+          &:hover {
+            border: 0.2px solid #ff9031;
+          }
+        }
+      }
+    }
+  }
+}
+
+.register-button {
+  background: $brand-secondary;
+  color: white;
+}
+
+@media only screen and (max-width: 1500px) {
+  .form-page-container {
+    .form-outer {
+      width: 45%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .form-page-container {
+    .form-outer {
+      width: 85%;
+    }
+  }
+
+  .form-inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .companies-logos-containers {
+    img {
+      width: 100%;
+      padding: 20px 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .form-page-container {
+    .form-outer {
+      width: 100%;
+      margin: 0 auto;
+      left: 0;
+      padding: 30px;
+
+      .form-inner {
+        width: 60%;
+      }
+    }
+  }
+}

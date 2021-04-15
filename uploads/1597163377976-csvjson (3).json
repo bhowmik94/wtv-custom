@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "5f2d0c35a7bd00483c6944a3"
+  },
+  "fullName": "dfefewf",
+  "email": "kuldeep.dhiraj@wtvglobal.com",
+  "password": "$2b$10$dgC/gzRH0d7funOw5Qv.p.PSc4jo.XSMUSWlfks6Kr0.CN/3iCC5a",
+  "username": "kuldeep.dhiraj@wtvglobal.com",
+  "accessAt": {
+    "$date": "2020-08-11T14:44:59.990Z"
+  },
+  "role": "admin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f2d8cc39ffb4700173dbb9d"
+  },
+  "fullName": "Luca Licata",
+  "email": "luca.licata@wtvglobal.com",
+  "password": "$2b$10$MEeIpKpi96GXO2a9wKCPKuMkO3q8UZjJh7l3GBzLY2F2pZVtA9pEq",
+  "username": "luca.licata@wtvglobal.com",
+  "accessAt": {
+    "$date": "2020-08-07T17:26:04.131Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f2d8ddb9ffb4700173dbb9e"
+  },
+  "fullName": "Nick Owen",
+  "email": "nick.owen@wtvglobal.com",
+  "password": "$2b$10$FR9PFjggr4KmO/qiXnjax.cWyp8kkZ6uSTPCgA4/lo2LQZKjVFh5.",
+  "username": "nick.owen@wtvglobal.com",
+  "accessAt": {
+    "$date": "2020-08-10T13:26:47.470Z"
+  },
+  "__v": 0
+}]

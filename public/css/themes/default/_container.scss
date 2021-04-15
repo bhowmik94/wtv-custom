@@ -1,0 +1,60 @@
+body .main-content{
+	overflow-x: hidden;
+  	min-height: 100vh;
+
+}
+
+.title-commmon-container{
+	color:$fontColour!important;
+}
+
+h5,h4,h3,p{
+	color:$brand-secondary!important
+}
+
+body .main-content-home{
+	overflow-x: hidden;
+}
+
+@import "./channel/body-background";
+@import "./channel/hello-carousel";
+@import "./channel/play-list";
+
+@import "./playlist/video-player";
+@import "./playlist/playlist-video-carousel";
+
+
+
+
+.container {
+	&.custom-width {
+		@media (min-width: 1441px) {
+			width: 1440px;
+			padding-left: 0px;
+			padding-right: 0px;
+			max-width: none;
+		}
+
+		@media (min-width: 768px) and (max-width: 1440px) {
+			width: 80%;
+			padding-left: 0px;
+			padding-right: 0px;
+			max-width: none;
+		}
+	}
+	&.custom-width-home {
+		@media (min-width: 800px) {
+			width: 900px;
+			padding-left: 0px;
+			padding-right: 0px;
+			max-width: none;
+		}
+
+		@media (min-width: 768px) and (max-width: 1440px) {
+			width: 80%;
+			padding-left: 0px;
+			padding-right: 0px;
+			max-width: none;
+		}
+	}
+}

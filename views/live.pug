@@ -1,0 +1,23 @@
+extends layout
+block content
+        .webcast-container
+            .webcast-container-inner
+                //div(class="form-group language-selection" )
+                //    label #{pageText.chooseYourLanguageText}&nbsp
+                //        select(onchange="location = this.value;" class="language-change-field")
+                //            option()
+                //            option(value="/live/arabic") #{pageText.languageChoice.arabic}
+                //            option(value="/live/chinese") #{pageText.languageChoice.mandarin}
+                //            option(value="/live/english") #{pageText.languageChoice.english}
+                //            option(value="/live/french") #{pageText.languageChoice.french}
+                //            option(value="/live/russian") #{pageText.languageChoice.russian}
+                //            option(value="/live/spanish") #{pageText.languageChoice.spanish}
+                div.row.title-common-container
+                    div.col-lg-6(style="padding-left:20px;")
+                        h5(style="font-weight:bold!important") #{pageText.titleHeader}
+                    div.col-lg-6(style="text-align:right")
+                        h4 #{pageText.dateHeader}
+                        p #{pageText.timeHeader}
+                .streasmtudio-container
+                    iframe.streamstudio-iframe(src=`https://streamstudio.world-television.com/${webcastTicket}/${pageText.webcastLanguage}?userSameSite=1` style="border: 0; padding-bottom:50px;background:transparent;" webkitallowfullscreen allowfullscreen frameborder="no")
+

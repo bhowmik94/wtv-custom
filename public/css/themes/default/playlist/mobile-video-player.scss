@@ -1,0 +1,32 @@
+
+.mobile-device-wrapper {
+  &.phone-device-wrapper{
+    .playlist-player {
+      .video-player{
+        margin-top: 5rem;
+      }
+    }
+
+    .playlist-video-info {
+      .video-info {
+        .item {
+          .title{
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .playlist-video-carousel{
+      .channels {
+        margin-top: -3rem;
+        .play-list{
+
+          .head {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

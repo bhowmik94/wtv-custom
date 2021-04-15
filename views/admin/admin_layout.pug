@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+      link(rel='stylesheet', href='/css/main.css?v=3.8.3')
+      style
+        include admin.css
+        include table.css
+  body
+          #menu-overlay
+          #menu-toggle.closed(data-title='Menu')
+            i.fa.fa-bars
+            i.fa.fa-times
+          header#main-header
+            nav#sidenav
+              #sidenav-header
+                #profile-picture
+                  img(src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSg6Tiu7ix5m4sH3bRK550_NoTJLhA99xzuq9IsxLbtnQEDBGNi&usqp=CAU')
+                a#profile-link(href='#') Admin
+              #account-actions
+                a(href='#' data-title='Home')
+                  i.fa.fa-home
+                a#messages(href='/admin/bulk_upload' data-title='Bulk User Upload' data-newmessages='1')
+                  i.fa.fa-inbox
+                a(href='#' data-title='Settings')
+                  i.fa.fa-cog
+              ul#main-nav
+                li.active
+                  a(href='/admin')
+                    i.fa.fa-home
+                    |           Dashboard
+                li
+                  a(href='/admin/bulk_upload')
+                    i.fa.fa-upload
+                    |           Bulk Upload
+                li
+                  a(href='/admin/users')
+                    i.fa.fa-user
+                    |           Users
+                li
+                  a(href='/admin/changeLogo')
+                    i.fa.fa-user
+                    |           Change Logo
+
+
+            form#admin-search
+              input#search-field(type='text' placeholder='Search')
+              label#search-label(for='search-field' title='Search')
+                i.fa.fa-search
+            #header_logo
+
+          block content

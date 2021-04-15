@@ -1,0 +1,13 @@
+extends admin_layout
+
+block content
+    section#content
+        h1= title
+        p=msg
+        form(method='post',enctype='multipart/form-data')
+            input(class="form-control-file" type='file', name='avatar')
+            input(type="hidden" name="_csrf" value=csrfToken)
+            br
+            input( type='submit', name='uploadimage', value='Upload File' class="btn btn-default" style="margin-top:10px")
+
+    footer

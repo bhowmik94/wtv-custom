@@ -1,0 +1,28 @@
+.webcast-container-inner {
+  padding-top: 120px;
+  width: 100%;
+  margin: 0 auto 60px auto;
+
+  .streamstudio-iframe {
+    width: 100%;
+    height: 940px;
+    @media only screen and(max-width:1300px){
+      height: 800px;
+      margin-bottom:60px
+    }
+    @media only screen and (max-width : 640px) {
+      width: 100%;
+      margin-bottom:60px;
+    }
+
+  }
+  @media only screen and(max-width:1300px){
+    margin: 0 auto 0 auto;
+    margin-bottom:60px
+  }
+  @media only screen and(max-width:600px){
+    margin: 0 auto 0 auto;
+    padding-top:130px;
+    margin-bottom:60px
+  }
+}

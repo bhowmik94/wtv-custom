@@ -1,0 +1,16 @@
+.session-selector-container{
+  text-align:center;
+  border-radius:20px;
+  background:$brand-primary;
+  color:white;
+  padding:20px;
+  cursor: pointer;
+  transition: background-color .5s ease;
+  a{
+    color:white;
+  }
+  &:hover{
+    background: $brand-secondary;
+    color:$brand-success
+  }
+}
