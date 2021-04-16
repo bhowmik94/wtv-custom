@@ -44,7 +44,7 @@ function getRandomString(length) {
 exports.register = (req, res) => {
   console.log(titleOptions);
   if (req.params.language === 'english' || req.params.language === undefined) {
-    res.render('register', {
+    res.render('register_person', {
       title: 'Register',
       msg: '',
       csrfToken: req.csrfToken(),
@@ -53,7 +53,7 @@ exports.register = (req, res) => {
       titleOptions: titleOptions
     });
   } else {
-    res.render('register', {
+    res.render('register_person', {
       title: 'Register',
       msg: '',
       csrfToken: req.csrfToken(),
@@ -68,7 +68,7 @@ exports.registerUser = async (req, res) => {
   console.log(req.body);
   const userFound = await User.find({ email: req.body.email });
   if (userFound.length) {
-    res.render('register', {
+    res.render('register_person', {
       title: 'Register',
       msg: 'User already registered',
       csrfToken: req.csrfToken(),

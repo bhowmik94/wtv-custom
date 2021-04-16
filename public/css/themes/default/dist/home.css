@@ -1,3 +1,15 @@
+#submit-btn {
+  background: #062172;
+  color: white !important;
+  font-weight: bold;
+  min-width: 150px;
+  text-align-last: center;
+  width: 200px;
+  border: 0.5px solid #CBE9DF;
+  border-radius: 20px;
+  transition: background-color 0.5s ease;
+}
+
 #home-container {
   text-align: center;
 }

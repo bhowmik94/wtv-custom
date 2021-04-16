@@ -1,0 +1,102 @@
+extends layout_login
+block content
+    div.form-page-container
+        img(src="/images/logos/GPE transforming education logo.png", alt="")
+        div.form-outer
+            .logo-container
+                img(src="/images/logos/LOGO GPE CONFERENCE_EN_TITLE_BLU.png")
+            div.form-inner()
+                //div(class="form-group " )
+                //    select(onchange="location = this.value;" class="language-change-field" style="width:50%")
+                //        option() #{pageText.chooseYourLanguageText}
+                //        option(value="/register/arabic") #{pageText.languageChoice.arabic}
+                //        option(value="/register/chinese") #{pageText.languageChoice.mandarin}
+                //        option(value="/register/english") #{pageText.languageChoice.english}
+                //        option(value="/register/french") #{pageText.languageChoice.french}
+                //        option(value="/register/russian") #{pageText.languageChoice.russian}
+                //        option(value="/register/spanish") #{pageText.languageChoice.spanish}
+
+                //h5(style="text-align:center") This is the registration page for the High-level Event: Tackling Covid-19 together through the ACT-Accelerator
+
+                h5(style="margin:0 auto;display: table") #{pageText.header1} 
+                    br
+                    strong #{pageText.header2}
+                form(method="post" action=`/register-person/${language}`)
+                    div(style="color:red;font-size:12px;margin-bottom:5px;")=msg
+                        
+                        div.row
+                            div.col-lg-6
+                                div(class="form-group" )
+                                    input(type="text" class="form-group"  placeholder=`${pageText.firstNamePlaceHolder}`  name="firstName" required)
+                            div.col-lg-6
+                                div(class="form-group" )
+                                    select(name="title" class="form-group padding-left" placeholder=`${pageText.titlePlaceHolder}` required)
+                                            option(value='Mr') Mr
+                                            option(value='Mrs') Mrs
+                                            option(value='Ms') Ms
+                        div.row  
+                            div.col-lg-6
+                                div(class="form-group" )
+                                    input(type="text" class="form-group"  placeholder=`${pageText.lastNamePlaceHolder}`  name="lastName" required )
+                            div.col-lg-6
+                                div(class="form-group" )
+                                    input(type="text" class="form-group"  placeholder=`${pageText.suffixPlaceHolder}`  name="suffix" required )
+
+                        div.row
+                            div.col-lg-6
+                                div(class="form-group" )
+                                    input(type="email" class="form-group" id="formGroupExampleInput2" placeholder=`${pageText.emailPlaceHolder}`  name="email" required  )
+                            div.col-lg-6
+                                div(class="form-group" )
+                                    input( class="form-group" type="text" id="formGroupExampleInput4" name="location" placeholder=`${pageText.countryPlaceHolder}`  required )
+                        div.row
+                            div.col-lg-6 
+                                //- div(class="form-group" )
+                                //-     input(type="text" class="form-group"  placeholder=`${pageText.rolePlaceHolder}`  name="role" required)
+                                //-     input(type="hidden" name="_csrf" value=csrfToken)
+
+                                div(class="form-group" )
+                                    input(type="text" class="form-group"  placeholder=`${pageText.jobTitlePlaceHolder}`  name="jobtitle") 
+                                    input(type="hidden" name="_csrf" value=csrfToken)                            
+                            div.col-lg-6
+                                div(class="form-group" )
+                                    input(type="text" class="form-group"  placeholder=`${pageText.organizationPlaceHolder}`  name="organisation" required)
+
+                        //- div.row
+                        //-     div.col-lg-6
+                        //-         div(class="form-group" )
+                        //-             input(type="date" class="form-group padding-left"  placeholder=`${pageText.dobPlaceHolder}`  name="dob" required )
+                        //-     div.col-lg-6
+                        //-         div(class="form-group" )
+                        //-             input(type="text" class="form-group"  placeholder=`${pageText.postalAddressPlaceHolder}`  name="address" required)                                    
+                        //- div.row
+                        //-     div.col-lg-12
+                        //-         div(class="form-group" )
+                        //-             textarea(class="form-control" name="question" id="exampleFormControlTextarea1" placeholder="Questions and Comments")
+                        //- div.row
+                        //-     div.col-lg-12
+                        //-         div(class="form-group" )
+                        //-             label(for="" class="notice-label") **Dietary requirements/ allergies, Access, Visual / hearing impairment, attending with carer etc. 
+                        //-             textarea(class="form-control" name="requirements" id="exampleFormControlTextarea2" placeholder="Special requirements")                                    
+                        //- div.row 
+                        //-     div.col-lg-12 
+                        //-         div(class="form-group") 
+                        //-             label(for="" class="notice-label") Upload your photo (**Must be at least 180 x 180 pixels)
+                        //-             input(type="file" id="profilePhoto" class="form-group padding-left" name="profilePhoto" placeholder=`${pageText.profilePhoto}`)               
+
+                        div.row
+                            div.col-lg-12
+                                div(class="form-group")
+                                    input(type="submit" value=`${pageText.submitButtonText}` class="btn btn-default register-button" )
+
+
+
+
+
+            h5 #{pageText.secondHeaderText}&nbsp
+                a(href=`/login/${language}` ) #{pageText.anchor}
+
+
+
+            //h5 <a style="color:#F66028" href="https://streamstudio-backend-staging.s3.eu-west-2.amazonaws.com/carnstone/documents/Anti-Trust+Statement+May+2020.docx.pdf" target="_blank" download>By accessing this portal you are confirming that you will observe PSCI’s anti-trust policy and guidelines click here to view</a>
+

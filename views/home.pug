@@ -25,11 +25,12 @@ block content
                                     select(name="title" class="form-group padding-left" required)
                                             option(value="virtual") virtual
                                             option(value="person") person
-                                    input(type="hidden" name="_csrf" value='eoyaZ65I-OxEPbYr6zW7_aGkng0F1GbjFy10')                                                                                       
+                                    input(type="hidden" name="_csrf" value='O31CpGki-1H34v2jeMta5uq6CA2zRqZhopWw')                                                                                       
                         div.row
                             div.col-lg-12
                                 div(class="form-group")
-                                    input(type="submit" value=`${pageText.submitButtonText}` class="btn btn-default register-button" )  
+                                    //- input(type="submit" value=`${pageText.submitButtonText}` class="btn btn-default register-button" )  
+                                    a(href=`/register/${language}` id="submit-btn" class="btn btn-default register-button") #{pageText.submitButtonText}
                                                                                
 
             

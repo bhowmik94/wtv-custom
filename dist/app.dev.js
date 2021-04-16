@@ -65,7 +65,9 @@ var Request = require("request");
 
 var rateLimit = require('express-rate-limit');
 
-var helmet = require('helmet'); //const RECAPTCHA_SITE_KEY_V3 = '6Lc7FP8UAAAAAAsTcm3h335mi02nnPFqQ52jt3VN'
+var helmet = require('helmet');
+
+var defaultText = require('../config/languagesText'); //const RECAPTCHA_SITE_KEY_V3 = '6Lc7FP8UAAAAAAsTcm3h335mi02nnPFqQ52jt3VN'
 //const RECAPTCHA_SECRET_KEY_V3 = '6Lc7FP8UAAAAAKgNSmsJiTBkkYb6AScVf49O1HMR'
 
 
@@ -118,6 +120,8 @@ var resourcesController = require('./controllers/resources');
 var loginController = require('./controllers/login');
 
 var registerController = require('./controllers/register');
+
+var registerPersonController = require('./controllers/registerPerson');
 
 var liveController = require('./controllers/live');
 
@@ -359,6 +363,10 @@ app.get('/register', registerController.register);
 app.get('/register/:language', registerController.register);
 app.post('/register', registerController.registerUser);
 app.post('/register/:language', registerController.registerUser);
+app.get('/register-person', registerPersonController.register);
+app.get('/register-person/:language', registerPersonController.register);
+app.post('/register-person', registerPersonController.registerUser);
+app.post('/register-person/:language', registerPersonController.registerUser);
 app.get('/eventbrite', eventbriteController.eventbrite);
 app.get('/eventbrite/:language', eventbriteController.eventbrite);
 app.get('/reset-password', registerController.resetPwd);
@@ -379,12 +387,17 @@ app.post('/uploads', upload.single("file"
   return res.status(200).send({
     url: "".concat(process.env.BASE_URL, "/static/").concat(req.file.filename)
   });
-});
-app.post('/selectRegPath', function (req, res) {
-  res.render('register', {
-    csrfToken: req.csrfToken()
-  });
-});
+}); // app.get('/selectRegPath', async(req, res) => {
+//   console.log(defaultText);
+//   res.render('register', {
+//     title: 'Register',
+//     msg: '',
+//     csrfToken: 'O31CpGki-1H34v2jeMta5uq6CA2zRqZhopWw',
+//     pageText: defaultText[english].registerPage,
+//     language: defaultText[english].language,
+//   });
+// })
+
 app.get('/success', function (req, res) {
   res.render('success');
 });

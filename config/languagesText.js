@@ -79,7 +79,11 @@ const english = {
     profilePhoto: 'Upload your photo',
     submitButtonText: 'Register',
     secondHeaderText: 'Already registered?',
-    anchor: 'Click here'
+    anchor: 'Click here',
+
+    errorText: 'Your registration was unsuccessful.',
+    errorSubText: 'We do not have these details on our database. If you would like to attend the conference please email',
+    helpEmail: 'GPE2021@globalpartnership.org'
   },
   homePage: {
     titleHeader: 'Welcome to the global education summit: ',

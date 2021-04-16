@@ -2,12 +2,15 @@ extends layout_login
 
 block content
     div.form-page-container
+        img(src="/images/logos/GPE transforming education logo.png", alt="")
         div.form-outer
             .logo-container
-                img(src="/images/logos/logo.png")
+                img(src="/images/logos/LOGO GPE CONFERENCE_EN_TITLE_BLU.png")
             div.form-inner()
-            h3(style="margin-top:5px;padding:20px;text-align:center") #{pageText.errorMessage}
+            h3(style="margin-top:5px;padding:20px;text-align:center") #{pageText.errorText}
+            h4 #{pageText.errorSubText}
+                | #{pageText.helpEmail} 
 
-            //h4 To go back to the login page&nbsp
-            //    a(href="/login" ) Click here
+            h6 Back to the registration page?&nbsp
+                a(href="/register" ) Click here
             //h5 <a style="color:#F66028" href="https://streamstudio-backend-staging.s3.eu-west-2.amazonaws.com/carnstone/documents/Anti-Trust+Statement+May+2020.docx.pdf" target="_blank" download>By accessing this portal you are confirming that you will observe PSCI’s anti-trust policy and guidelines click here to view</a>

@@ -34,6 +34,9 @@ const RECAPTCHA_SECRET = '6LdYb_8UAAAAAK_Qa7UynORVt_I5xQwY7UkgKkys'
 const Request = require("request");
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet')
+
+
+const defaultText = require('../config/languagesText');
 //const RECAPTCHA_SITE_KEY_V3 = '6Lc7FP8UAAAAAAsTcm3h335mi02nnPFqQ52jt3VN'
 //const RECAPTCHA_SECRET_KEY_V3 = '6Lc7FP8UAAAAAKgNSmsJiTBkkYb6AScVf49O1HMR'
 
@@ -89,6 +92,7 @@ const agendaController = require('./controllers/agenda');
 const resourcesController = require('./controllers/resources');
 const loginController = require('./controllers/login');
 const registerController = require('./controllers/register');
+const registerPersonController = require('./controllers/registerPerson');
 const liveController = require('./controllers/live');
 const liveController2 = require('./controllers/live2');
 const indexController = require('./controllers/index');
@@ -304,10 +308,23 @@ app.post('/login', urlencodedParser, loginController.loginPost)
 app.post('/login/:language', urlencodedParser, loginController.loginPost)
 app.get('/resendEmail', MailController.index)
 app.post('/resendEmail', MailController.sendMail)
+
+
+
+
 app.get('/register', registerController.register)
 app.get('/register/:language', registerController.register)
 app.post('/register', registerController.registerUser)
 app.post('/register/:language', registerController.registerUser)
+
+app.get('/register-person', registerPersonController.register)
+app.get('/register-person/:language', registerPersonController.register)
+app.post('/register-person', registerPersonController.registerUser)
+app.post('/register-person/:language', registerPersonController.registerUser)
+
+
+
+
 app.get('/eventbrite', eventbriteController.eventbrite);
 app.get('/eventbrite/:language', eventbriteController.eventbrite);
 app.get('/reset-password', registerController.resetPwd)
@@ -327,11 +344,17 @@ app.post('/uploads', upload.single("file" /* name attribute of <file> element in
     return res.status(200)
       .send({ url: `${process.env.BASE_URL}/static/${req.file.filename}` })
   });
-app.post('/selectRegPath', (req, res) => {
-  res.render('register', {
-    csrfToken: req.csrfToken()
-  });
-})
+  
+// app.get('/selectRegPath', async(req, res) => {
+//   console.log(defaultText);
+//   res.render('register', {
+//     title: 'Register',
+//     msg: '',
+//     csrfToken: 'O31CpGki-1H34v2jeMta5uq6CA2zRqZhopWw',
+//     pageText: defaultText[english].registerPage,
+//     language: defaultText[english].language,
+//   });
+// })
 
 
 app.get('/success', (req, res) => {

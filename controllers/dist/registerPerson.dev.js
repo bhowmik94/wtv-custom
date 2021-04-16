@@ -55,7 +55,7 @@ exports.register = function (req, res) {
   console.log(titleOptions);
 
   if (req.params.language === 'english' || req.params.language === undefined) {
-    res.render('register', {
+    res.render('register_person', {
       title: 'Register',
       msg: '',
       csrfToken: req.csrfToken(),
@@ -64,7 +64,7 @@ exports.register = function (req, res) {
       titleOptions: titleOptions
     });
   } else {
-    res.render('register', {
+    res.render('register_person', {
       title: 'Register',
       msg: '',
       csrfToken: req.csrfToken(),
@@ -96,7 +96,7 @@ exports.registerUser = function _callee(req, res) {
             break;
           }
 
-          res.render('register', {
+          res.render('register_person', {
             title: 'Register',
             msg: 'User already registered',
             csrfToken: req.csrfToken(),
