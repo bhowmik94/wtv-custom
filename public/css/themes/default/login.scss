@@ -15,12 +15,21 @@
 }
 
 .form-page-container {
-  //  background-image: url(" ../../images/login_background.jpg");
-  background: linear-gradient(to right, #ff9031, #ffcb4c);
+   background: url(" ../../images/main-bg.png") center;
+  // background: linear-gradient(to right, #ff9031, #ffcb4c);
   min-height: 100vh;
-  padding-top: 70px;
+  // padding-top: 70px;
   color: $brand-primary !important;
   font-weight: 600 !important;
+  // sourav edit
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  img {
+    width: 25%;
+    align-self: center;
+  }
 
   .form-outer {
     position: relative;
@@ -28,8 +37,7 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    background: linear-gradient(to right, #ffebc3, #fffbf4);
-    box-shadow: 0px 0px 15px grey;
+    background: #dfe0e8c2;
 
     h5:last-child {
       padding-bottom: 20px;
@@ -37,6 +45,7 @@
     h5 {
       text-align: center;
       color: grey;
+      
 
       a {
         color: $brand-primary;
@@ -45,12 +54,11 @@
     }
 
     .logo-container {
-      width: 25%;
+      width: 35%;
       position: relative;
-      left: 10px;
-      top: 10px;
-
-      padding: 20px;
+      // left: 10px;
+      // top: 10px;
+      // padding: 20px;
 
       img {
         width: 100%;
@@ -107,7 +115,7 @@
           text-align-last: left;
           color: $brand-primary;
           background: white;
-          border: 0.2px solid #ffcb4c;
+          border: 0.5px solid #CBE9DF;
 
           &::placeholder {
             // color: $brand-secondary !important;
@@ -115,7 +123,7 @@
             font-size: 1.2em;
           }
           &:hover {
-            border: 0.2px solid #ff9031;
+            border: 0.5px solid #CBE9DF;
           }
         }
 
@@ -126,10 +134,10 @@
           min-width: 150px;
           text-align-last: center;
           width: 200px;
-          border: 0.2px solid #ffcb4c;
+          border: 0.5px solid #CBE9DF;
           transition: background-color 0.5s ease;
           &:hover {
-            border: 0.2px solid #ff9031;
+            border: 0.5px solid #CBE9DF;
           }
         }
       }

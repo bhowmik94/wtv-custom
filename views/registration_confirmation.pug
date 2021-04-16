@@ -2,18 +2,22 @@ extends layout_login
 
 block content
     div.form-page-container
+        img(src="/images/logos/GPE transforming education logo.png", alt="")
         div.form-outer
             .logo-container
-                img(src="/images/logos/logo.png")
+                img(src="/images/logos/LOGO GPE CONFERENCE_EN_TITLE_BLU.png")
             div.form-inner()
             h3(style="margin-top:5px;padding:20px;text-align:center") #{pageText.thankYou}
             h5(style="margin-top:5px;padding:20px;text-align:center") #{pageText.emailBody}
             .confirmation-body-container
-                p #{pageText.itInfo}
-                //p #{pageText.eventDateInfo}: #{pageText.eventUrl}
-                //p #{pageText.eventLoginInfo}
+                p #{pageText.itInfo} 
+                    strong #{pageText.emailName}
+                    span #{pageText.itInfo2}
                 p #{pageText.footerInfo}
-                p.reset-password-success(style="text-decoration:underline") #{pageText.supportText}
-            h4 #{pageText.backToLogin}&nbsp
-                a(href=`/login/${language}` ) Click here
+                    a(href="#") here 
+                p Check out our 
+                    a(href="#") website 
+                    | for summit updates
+            //- h4 #{pageText.backToLogin}&nbsp
+            //-     a(href=`/login/${language}` ) Click here
             //h5 <a style="color:#F66028" href="https://streamstudio-backend-staging.s3.eu-west-2.amazonaws.com/carnstone/documents/Anti-Trust+Statement+May+2020.docx.pdf" target="_blank" download>By accessing this portal you are confirming that you will observe PSCI’s anti-trust policy and guidelines click here to view</a>

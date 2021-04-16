@@ -3,10 +3,11 @@ extends layout_login
 block content
     //- <div style="color:white;background-color:#0066A1;margin-top:30px;width:60%;padding-top:5px;padding-bottom:5px;"><h1 style="text-align:left;padding-left:20px;">Login: <b>Page</b></h1></div>
     div.form-page-container
+        img(src="/images/logos/GPE transforming education logo.png", alt="")
         div(class="form-outer")
                 .logo-container()
-                    img(src="/images/logos/logo.png")
-                div.form-inner(style="width:40%")
+                    img(src="/images/logos/LOGO GPE CONFERENCE_EN_TITLE_BLU.png")
+                div.form-inner(style="width:62%")
                     //div(class="form-group " )
                     //    select(onchange="location = this.value;" class="language-change-field" )
                     //        option() #{pageText.chooseYourLanguageText}
@@ -16,7 +17,9 @@ block content
                     //        option(value="/login/french") #{pageText.languageChoice.french}
                     //        option(value="/login/russian") #{pageText.languageChoice.russian}
                     //        option(value="/login/spanish") #{pageText.languageChoice.spanish}
-                    h5(style="margin:0 auto;display:table;") #{pageText.header}
+                    h5.login-header(style="margin:0 auto;display:table;") #{pageText.header}
+                    h5.login-header(style="margin:0 auto;display:table;") #{pageText.subHeader1}
+                    h5.login-header(style="margin:0 auto;display:table;") #{pageText.subHeader2}
                     form(method="post" action=`/login/${language}`)
                         div(class="form-group")
                             input(type="email" class="form-control" placeholder=`${pageText.emailPlaceHolder}` name="email" required  )

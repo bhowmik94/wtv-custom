@@ -216,7 +216,7 @@ app.use(passport.session());
 app.use(flash());
 //var csrfProtection = csrf({ cookie: true })
 var api = createApiRouter()
-// app.use(csrf())
+app.use(csrf())
 app.use(helmet())
 
 /** Passport COnfiguration */
@@ -327,6 +327,11 @@ app.post('/uploads', upload.single("file" /* name attribute of <file> element in
     return res.status(200)
       .send({ url: `${process.env.BASE_URL}/static/${req.file.filename}` })
   });
+app.post('/selectRegPath', (req, res) => {
+  res.render('register', {
+    csrfToken: req.csrfToken()
+  });
+})
 
 
 app.get('/success', (req, res) => {

@@ -29,7 +29,9 @@ const english = {
   },
   loginPage: {
     chooseYourLanguageText: 'Choose your language',
-    header: 'Welcome to this wtv. SHARESTUDIO EVENT Login now',
+    header: 'Welcome to the global education summit: ',
+    subHeader1: 'Financing GPE 2021-2025',
+    subHeader2: 'Please login below',
     wrongLoginMessage: 'Wrong Email or Password',
     userNotExistingLoginMessage: 'Your User cannot be found, please Register',
     languageChoice: {
@@ -59,16 +61,18 @@ const english = {
       spanish: 'Español'
     },
     chooseYourLanguageText: 'Choose your language: ',
-    header: 'Welcome to this wtv. SHARESTUDIO Event',
+    header1: 'Virtual Attendance.',
+    header2: 'Please complete the following fields: ',
     suffixPlaceHolder: 'Suffix',
     titlePlaceHolder: 'Your Preferred Title',
-    firstNamePlaceHolder: 'First Name (s)',
-    lastNamePlaceHolder: 'Surname',
+    firstNamePlaceHolder: 'First Name(s)*',
+    lastNamePlaceHolder: 'Surname*',
     middleNamePlaceHolder: 'Middle Name (s)',
-    organizationPlaceHolder: 'Organisation ',
+    jobTitlePlaceHolder: 'Job Title',
+    organizationPlaceHolder: 'Organisation Name',
     rolePlaceHolder: 'Role within Organisation',
-    countryPlaceHolder: 'Location ',
-    emailPlaceHolder: 'Email Address',
+    countryPlaceHolder: 'Country',
+    emailPlaceHolder: 'Email*',
     dobPlaceHolder: 'Date of Birth', // date of birth
     postalAddressPlaceHolder: 'Full Postal Address',
     specialRequirementsPlaceHolder: 'Special requirements: Dietary requirements/ allergies, Access, Visual / hearing impairment, attending with carer etc.',
@@ -78,7 +82,8 @@ const english = {
     anchor: 'Click here'
   },
   homePage: {
-    titleHeader: 'Welcome to this wtv. SHARESTUDIO Event',
+    titleHeader: 'Welcome to the global education summit: ',
+    subHeader: 'Financing GPE 2021-2025',
     chooseYourLanguageText: 'Choose your language: ',
     languageChoice: {
       arabic: 'العربية',
@@ -89,10 +94,14 @@ const english = {
       spanish: 'Español'
     },
 
-    bodyTitleHeader: 'Accelerating the end of the Covid-19 pandemic: Taking new solutions to scale and making them equitably accessible, to save lives, protect health systems and restart the global economy',
-    bodySecondHeader: '75th session of UNGA: Wednesday 30 September 2020, 08:30 – 10:00 EST',
-    bodyTextOne: 'The Access to the Covid-19 Tools ACT-Accelerator (ACT-A), launched on 24 April 2020, and its mechanisms such as the COVAX Vaccines Facility represent a global solution to fast-track the development and distribution of Covid-19 vaccines, treatments and tests for all. By combining public and private sector expertise and institutions from around the world, these mechanisms will help enable the international community to save lives, protect health systems and restart the global economy.',
-    bodyTextTwo: 'This event at UNGA aims to build even stronger political agreement for these coordinated global responses to Covid-19. By bringing countries and international organisations together to show their commitment to the ACT-A and its mechanisms, we can ensure it is able to help bring an end to this global crisis. This session will be a virtual live event, which will feature live and pre-recorded content, co-hosted by the UN Secretary General, WHO, the UK and South Africa',
+    bodyTitleHeader: "On the 28 & 29 July we invite you to participate in GPE's global hybrid summit",
+    bodySecondHeader: '',
+    bodyTextOne: 'The summit will be hosted virtually allowed for greater, broader audience participation with a limited in person event hosted in London',
+    bodyTextTwo: 'Due to the global COVID-19 restrictions in place globally we will be showing all our Summit contents and more in a virtual environment',
+    bodyTextThree: 'We look forward to you joining us',
+    bodyTextFour: 'Let us know how you would like to participate by selecting from the dropdown options',
+    secondHeaderText: 'Already registered?',
+    submitButtonText: 'Confirm',
     watchAnchor: 'You can watch the live broadcast by clicking here'
   },
   livePage: {
@@ -159,14 +168,16 @@ const english = {
 
   confirmation: {
     chooseYourLanguageText: 'Choose your language: ',
-	  thankYou: 'Thank you for registering.',
-    itInfo: 'Please check with your local IT teams to ensure that the email does not appear in your spam folder or that your Firewall prevents it from reaching you.',
-    emailBody: 'You will shortly receive an email from no-reply-sharestudio@wtvglobal.com containing your password.',
+	  thankYou: 'Thank you for your registration!',
+    itInfo: 'This email will be sent from the following address',
+    emailName: 'GPE-no-reply@wtvglobal.com',
+    itInfo2: ', please ensure that this is added to your safe senders list so it does not get lost in the spam folder.',
+    emailBody: 'You will receive an email with all your login detail shortly. This will contain your Username & Password to login to the portal on the day of the summit.',
     eventDateInfo: '',
     emailAnchor: 'fcdo@wtvglobal.com',
     eventUrl: 'https://acpf-portal.world-television.com/',
     eventLoginInfo: 'Please login to the Event Portal on the 30th September from 05:00 EST using the same email address that you entered during registration.',
-    footerInfo: 'The Event will begin at 09:00 on the 20th November 2020',
+    footerInfo: 'For more information on how to do so please click',
     backToLogin: 'Back to login page:',
     supportText: 'If you did not receive your confirmation email please send a support request to sharestudio-support@wtvglobal.com'
   },

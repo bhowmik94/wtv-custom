@@ -1,34 +1,40 @@
-extends layout
-
+extends layout_login
 block content
-  div.home-container
-    //div(class="form-group language-selection" )
-    //  label #{pageText.chooseYourLanguageText}&nbsp
-    //    select(onchange="location = this.value;" class="language-change-field")
-    //      option()
-    //      option(value="/home/arabic") #{pageText.languageChoice.arabic}
-    //      option(value="/home/chinese") #{pageText.languageChoice.mandarin}
-    //      option(value="/home/english") #{pageText.languageChoice.english}
-    //      option(value="/home/french") #{pageText.languageChoice.french}
-    //      option(value="/home/russian") #{pageText.languageChoice.russian}
-    //      option(value="/home/spanish") #{pageText.languageChoice.spanish}
-    div.container
-      div.row.title-common-container
-        div.col-lg-6(style="padding-left:20px;" )
-          h5(style="font-weight:bold!important") #{titleHeader}
-        div.col-lg-6(style="text-align:right")
-          h4 #{dateHeader}
-          p #{timeHeader}
-      div.banner-container
 
+    div.form-page-container
+        img(src="/images/logos/GPE transforming education logo.png", alt="")
+        div.form-outer
+            .logo-container
+                img(src="/images/logos/LOGO GPE CONFERENCE_EN_TITLE_BLU.png")
+            div.form-inner#home-container
+                h5(style="margin:0 auto;display: table") #{pageText.titleHeader} 
+                  br 
+                  span #{pageText.subHeader}
+                
+                p #{pageText.bodyTextOne}
+                p #{pageText.bodyTextTwo}
+                p #{pageText.bodyTextThree}
+                p #{pageText.bodyTextFour}
 
+                form(method="post" action='/selectRegPath')
+                    div(style="color:red;font-size:12px;margin-bottom:5px;")=msg
+                        
+                        div.row
+                            div.col-lg-6
+                                div(class="form-group" )
+                                    select(name="title" class="form-group padding-left" required)
+                                            option(value="virtual") virtual
+                                            option(value="person") person
+                                    input(type="hidden" name="_csrf" value='eoyaZ65I-OxEPbYr6zW7_aGkng0F1GbjFy10')                                                                                       
+                        div.row
+                            div.col-lg-12
+                                div(class="form-group")
+                                    input(type="submit" value=`${pageText.submitButtonText}` class="btn btn-default register-button" )  
+                                                                               
 
-    div.title-container.description-container.container
-      h3(style="margin-top:10px;text-align:center; text-decoration:underline;padding:10px 0") #{pageText.bodyTitleHeader}
-      h5(style="margin-top:10px;text-align:center;padding:10px 0") #{pageText.bodySecondHeader}
-      p.home-description-text() #{pageText.bodyTextOne}
-      p.home-description-text() #{pageText.bodyTextTwo}
-      a(href=`/live/${language}` style="text-decoration:underline")  #{pageText.watchAnchor}
+            
+            h5 #{pageText.secondHeaderText}&nbsp
+                a(href=`/login/${language}` ) Click Here
 
 
 block customscript

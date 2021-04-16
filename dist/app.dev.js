@@ -67,18 +67,19 @@ var rateLimit = require('express-rate-limit');
 
 var helmet = require('helmet'); //const RECAPTCHA_SITE_KEY_V3 = '6Lc7FP8UAAAAAAsTcm3h335mi02nnPFqQ52jt3VN'
 //const RECAPTCHA_SECRET_KEY_V3 = '6Lc7FP8UAAAAAKgNSmsJiTBkkYb6AScVf49O1HMR'
-//  const multer = require('multer')
-//  var storage = multer.diskStorage({
-//    destination: function (req, file, cb) {
-//      cb(null, path.join(__dirname, 'uploads'))
-//    },
-//    filename: function (req, file, cb) {
-//      cb(null, Date.now() + '-' + file.originalname)
-//    }
-//  })
-//  var upload = multer({ storage: storage })
 
 
+var storage = multer.diskStorage({
+  destination: function destination(req, file, cb) {
+    cb(null, path.join(__dirname, 'uploads'));
+  },
+  filename: function filename(req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname);
+  }
+});
+var upload = multer({
+  storage: storage
+});
 var rateLimiter = rateLimit({
   windowMs: 5 * 60 * 1000,
   // 24 hrs in milliseconds
@@ -178,18 +179,16 @@ app.use(bodyParser.urlencoded({
   extended: true
 })); // app.use(enforce.HTTPS({ trustProtoHeader: true }));
 // app.use(rateLimiter);
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, 'uploads')
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, file.fieldname + '-' + Date.now())
+//   }
+// });
+// let upload = multer({ storage: storage });
 
-var storage = multer.diskStorage({
-  destination: function destination(req, file, cb) {
-    cb(null, 'uploads');
-  },
-  filename: function filename(req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now());
-  }
-});
-var upload = multer({
-  storage: storage
-});
 /**
  * Configure Express-Session
  * */
@@ -374,6 +373,18 @@ app.get('/admin', secure(), AdminController.index);
 app.get('/admin/bulk_upload', secure(), AdminController.uploadUsers);
 app.get('/admin/users', secure(), AdminController.users);
 app.get('/admin/changeLogo', secure(), AdminController.changeLogo);
+app.post('/uploads', upload.single("file"
+/* name attribute of <file> element in your form */
+), function (req, res) {
+  return res.status(200).send({
+    url: "".concat(process.env.BASE_URL, "/static/").concat(req.file.filename)
+  });
+});
+app.post('/selectRegPath', function (req, res) {
+  res.render('register', {
+    csrfToken: req.csrfToken()
+  });
+});
 app.get('/success', function (req, res) {
   res.render('success');
 });

@@ -1,9 +1,10 @@
 extends layout_login
 block content
     div.form-page-container
+        img(src="/images/logos/GPE transforming education logo.png", alt="")
         div.form-outer
             .logo-container
-                img(src="/images/logos/logo.png")
+                img(src="/images/logos/LOGO GPE CONFERENCE_EN_TITLE_BLU.png")
             div.form-inner()
                 //div(class="form-group " )
                 //    select(onchange="location = this.value;" class="language-change-field" style="width:50%")
@@ -17,23 +18,26 @@ block content
 
                 //h5(style="text-align:center") This is the registration page for the High-level Event: Tackling Covid-19 together through the ACT-Accelerator
 
-                h5(style="margin:0 auto;display: table") #{pageText.header}
+                h5(style="margin:0 auto;display: table") #{pageText.header1} 
+                    br
+                    strong #{pageText.header2}
                 form(method="post" action=`/register/${language}`)
                     div(style="color:red;font-size:12px;margin-bottom:5px;")=msg
+                        
                         div.row
-
                             div.col-lg-6
                                 div(class="form-group" )
                                     input(type="text" class="form-group"  placeholder=`${pageText.firstNamePlaceHolder}`  name="firstName" required)
                             div.col-lg-6
                                 div(class="form-group" )
-                                    input(type="text" class="form-group"  placeholder=`${pageText.lastNamePlaceHolder}`  name="lastName" required )
-                        div.row
+                                    select(name="title" class="form-group padding-left" placeholder=`${pageText.titlePlaceHolder}` required)
+                                            option(value='Mr') Mr
+                                            option(value='Mrs') Mrs
+                                            option(value='Ms') Ms
+                        div.row  
                             div.col-lg-6
                                 div(class="form-group" )
-                                    select(name="title" class="form-group padding-left" placeholder=`${pageText.titlePlaceHolder}` required)
-                                        each val in titleOptions
-                                            option(value=`${val.name}`) #{val.name}  
+                                    input(type="text" class="form-group"  placeholder=`${pageText.lastNamePlaceHolder}`  name="lastName" required )
                             div.col-lg-6
                                 div(class="form-group" )
                                     input(type="text" class="form-group"  placeholder=`${pageText.suffixPlaceHolder}`  name="suffix" required )
@@ -46,34 +50,39 @@ block content
                                 div(class="form-group" )
                                     input( class="form-group" type="text" id="formGroupExampleInput4" name="location" placeholder=`${pageText.countryPlaceHolder}`  required )
                         div.row
+                            div.col-lg-6 
+                                //- div(class="form-group" )
+                                //-     input(type="text" class="form-group"  placeholder=`${pageText.rolePlaceHolder}`  name="role" required)
+                                //-     input(type="hidden" name="_csrf" value=csrfToken)
+
+                                div(class="form-group" )
+                                    input(type="text" class="form-group"  placeholder=`${pageText.jobTitlePlaceHolder}`  name="jobtitle") 
+                                    input(type="hidden" name="_csrf" value=csrfToken)                            
                             div.col-lg-6
                                 div(class="form-group" )
-                                    input(type="text" class="form-group"  placeholder=`${pageText.organizationPlaceHolder}`  name="company" required )
-                            div.col-lg-6
-                                div(class="form-group" )
-                                    input(type="text" class="form-group"  placeholder=`${pageText.rolePlaceHolder}`  name="role" required)
-                                    input(type="hidden" name="_csrf" value=csrfToken)
-                        div.row
-                            div.col-lg-6
-                                div(class="form-group" )
-                                    input(type="date" class="form-group padding-left"  placeholder=`${pageText.dobPlaceHolder}`  name="dob" required )
-                            div.col-lg-6
-                                div(class="form-group" )
-                                    input(type="text" class="form-group"  placeholder=`${pageText.postalAddressPlaceHolder}`  name="address" required)                                    
-                        div.row
-                            div.col-lg-12
-                                div(class="form-group" )
-                                    textarea(class="form-control" name="question" id="exampleFormControlTextarea1" placeholder="Questions and Comments")
-                        div.row
-                            div.col-lg-12
-                                div(class="form-group" )
-                                    label(for="" class="notice-label") **Dietary requirements/ allergies, Access, Visual / hearing impairment, attending with carer etc. 
-                                    textarea(class="form-control" name="requirements" id="exampleFormControlTextarea2" placeholder="Special requirements")                                    
-                        div.row 
-                            div.col-lg-12 
-                                div(class="form-group") 
-                                    label(for="" class="notice-label") Upload your photo (**Must be at least 180 x 180 pixels)
-                                    input(type="file" id="profilePhoto" class="form-group padding-left" name="profilePhoto" placeholder=`${pageText.profilePhoto}`)               
+                                    input(type="text" class="form-group"  placeholder=`${pageText.organizationPlaceHolder}`  name="organisation" required)
+
+                        //- div.row
+                        //-     div.col-lg-6
+                        //-         div(class="form-group" )
+                        //-             input(type="date" class="form-group padding-left"  placeholder=`${pageText.dobPlaceHolder}`  name="dob" required )
+                        //-     div.col-lg-6
+                        //-         div(class="form-group" )
+                        //-             input(type="text" class="form-group"  placeholder=`${pageText.postalAddressPlaceHolder}`  name="address" required)                                    
+                        //- div.row
+                        //-     div.col-lg-12
+                        //-         div(class="form-group" )
+                        //-             textarea(class="form-control" name="question" id="exampleFormControlTextarea1" placeholder="Questions and Comments")
+                        //- div.row
+                        //-     div.col-lg-12
+                        //-         div(class="form-group" )
+                        //-             label(for="" class="notice-label") **Dietary requirements/ allergies, Access, Visual / hearing impairment, attending with carer etc. 
+                        //-             textarea(class="form-control" name="requirements" id="exampleFormControlTextarea2" placeholder="Special requirements")                                    
+                        //- div.row 
+                        //-     div.col-lg-12 
+                        //-         div(class="form-group") 
+                        //-             label(for="" class="notice-label") Upload your photo (**Must be at least 180 x 180 pixels)
+                        //-             input(type="file" id="profilePhoto" class="form-group padding-left" name="profilePhoto" placeholder=`${pageText.profilePhoto}`)               
 
                         div.row
                             div.col-lg-12
@@ -81,18 +90,6 @@ block content
                                     input(type="submit" value=`${pageText.submitButtonText}` class="btn btn-default register-button" )
 
 
-
-                form(method="post" action='/' encType="multipart/form-data")
-                    div(style="color:red;font-size:12px;margin-bottom:5px;")=msg
-                        div.row 
-                            div.col-lg-12 
-                                div(class="form-group") 
-                                    label(for="" class="notice-label") Upload your photo (**Must be at least 180 x 180 pixels)
-                                    input(type="file" id="profilePhoto" class="form-group padding-left" name="profilePhoto" placeholder=`${pageText.profilePhoto}`)
-                        div.row
-                            div.col-lg-12
-                                div(class="form-group")
-                                    input(type="submit" value=`${pageText.submitButtonText}` class="btn btn-default register-button" )
 
 
 

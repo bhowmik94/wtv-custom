@@ -1,0 +1,7 @@
+#home-container {
+  text-align: center;
+}
+#home-container form .row {
+  display: flex;
+  justify-content: center;
+}

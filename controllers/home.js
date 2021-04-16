@@ -17,6 +17,7 @@ exports.home =async (req, res) => {
       headerMenu:defaultText.english.menuHeader,
       footer:defaultConfig.socialMedia,
       titleHeader: defaultText[req.params.language].homePage.titleHeader,
+      subHeader: defaultText[req.params.language].homePage.subHeader,
       dateHeader: defaultText[req.params.language].dateHeader,
       timeHeader: defaultText[req.params.language].timeHeader
     });
@@ -31,6 +32,7 @@ exports.home =async (req, res) => {
       headerMenu:defaultText[req.params.language].menuHeader,
       footer:defaultConfig.socialMedia,
       titleHeader: defaultText[req.params.language].titleHeader,
+      subHeader: defaultText[req.params.language].homePage.subHeader,
       dateHeader: defaultText[req.params.language].dateHeader,
       timeHeader: defaultText[req.params.language].timeHeader
     })
